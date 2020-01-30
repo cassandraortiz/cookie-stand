@@ -35,28 +35,190 @@
 // Lima     |      2     |     16     |        4.6
 
 var operatingHours = ['6am', '7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
+var franchiseLocations = ['Seattle','Tokyo','Dubai','Paris','Lima'];
 
 var location1 = {
     name: 'Seattle',
     avgCookies: 6.3, 
     minCustomers: 23,
     maxCustomers: 65,
-    customerPerHr: function(max){
-        return Math.floor(Math.random() * Math.floor(max));
+    customerPerHr: function(min, max){
+        // does the lowest number of a random number max of 0-42 (difference)  ( but adds back in the minium 23 if value is 0)
+        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
+        //console.log(`Here is the random number: ${randomNumber}`);
+        return randomNumber;
     },
     totalDailyCookies: function(arr){
         var hourlyCookies = this.name;
         var totalCookies = 0;
-
+        var arrOutput = [];
+        
         for (var i = 0; i < arr.length; i++){
-            var calCookies = this.customerPerHr(this.maxCustomers);
-            console.log(`Index ${i}: calCookies: ${calCookies}`);
-            var hourlyOutput = Math.round(calCookies * this.avgCookies);
+            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
+            //console.log(`Index ${i}: cookiesNeeded: ${cookiesNeeded}`);
+            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
+            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
+            //this is my string output result and total tally
             hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
             totalCookies = totalCookies + hourlyOutput;
         }
-        return hourlyCookies + `\nTotal: ${totalCookies} cookies`;
-    }
-}
+        //console.log(hourlyCookies + `\nTotal: ${totalCookies} cookies`);
+        arrOutput.push(`Total: ${totalCookies} cookies`);
+        return arrOutput;
+    },
+};
 
-console.log(location1.totalDailyCookies(operatingHours));
+console.log(location1.name +"; " + location1.totalDailyCookies(operatingHours));
+// Tokyo    |      3     |     24     |        1.2
+
+var location2 = {
+    name: 'Tokyo',
+    avgCookies: 1.2, 
+    minCustomers: 3,
+    maxCustomers: 24,
+    customerPerHr: function(min, max){
+        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
+        return randomNumber;
+    },
+    totalDailyCookies: function(arr){
+        var hourlyCookies = this.name;
+        var totalCookies = 0;
+        var arrOutput = [];
+        
+        for (var i = 0; i < arr.length; i++){
+            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
+            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
+            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
+            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
+            totalCookies = totalCookies + hourlyOutput;
+        }
+        arrOutput.push(`Total: ${totalCookies} cookies`);
+        return arrOutput;
+    },
+};
+
+console.log(location2.name +"; " + location2.totalDailyCookies(operatingHours));
+
+// Dubai    |      11    |     38     |        3.7
+
+var location3 = {
+    name: 'Dubai',
+    avgCookies: 3.7, 
+    minCustomers: 11,
+    maxCustomers: 38,
+    customerPerHr: function(min, max){
+        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
+        return randomNumber;
+    },
+    totalDailyCookies: function(arr){
+        var hourlyCookies = this.name;
+        var totalCookies = 0;
+        var arrOutput = [];
+        
+        for (var i = 0; i < arr.length; i++){
+            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
+            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
+            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
+            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
+            totalCookies = totalCookies + hourlyOutput;
+        }
+        arrOutput.push(`Total: ${totalCookies} cookies`);
+        return arrOutput;
+    },
+};
+
+console.log(location3.name +"; " + location3.totalDailyCookies(operatingHours));
+
+// Paris    |      20    |     38     |        2.3
+
+var location4 = {
+    name: 'Paris',
+    avgCookies: 2.3, 
+    minCustomers: 20,
+    maxCustomers: 38,
+    customerPerHr: function(min, max){
+        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
+        return randomNumber;
+    },
+    totalDailyCookies: function(arr){
+        var hourlyCookies = this.name;
+        var totalCookies = 0;
+        var arrOutput = [];
+        
+        for (var i = 0; i < arr.length; i++){
+            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
+            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
+            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
+            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
+            totalCookies = totalCookies + hourlyOutput;
+        }
+        arrOutput.push(`Total: ${totalCookies} cookies`);
+        return arrOutput;
+    },
+};
+
+console.log(location4.name +"; " + location4.totalDailyCookies(operatingHours));
+
+// Lima     |      2     |     16     |        4.6
+
+
+var location5 = {
+    name: 'Lima',
+    avgCookies: 4.6, 
+    minCustomers: 2,
+    maxCustomers: 16,
+    customerPerHr: function(min, max){
+        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
+        return randomNumber;
+    },
+    totalDailyCookies: function(arr){
+        var hourlyCookies = this.name;
+        var totalCookies = 0;
+        var arrOutput = [];
+        for (var i = 0; i < arr.length; i++){
+            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
+            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
+            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
+            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
+            totalCookies = totalCookies + hourlyOutput;
+        }
+        arrOutput.push(`Total: ${totalCookies} cookies`);
+        return arrOutput;
+    },
+};
+
+console.log(location5.name +"; " + location5.totalDailyCookies(operatingHours));
+
+//Here is calling the totalDailyCookies function (***RETURNS an ARRAY***): location1.totalDailyCookies(operatingHours));
+//Here is calling the customerPerHr function  (***RETURNS an RANDOM NUMBER***):   location1.customerPerHr(location1.minCustomers, location1.maxCustomers));
+
+//
+var salesSection = document.getElementById('dailySalesByLocation');
+//creating an article for each location;
+// contains header and ordered list
+for(var i = 0; i<franchiseLocations.length; i++){
+
+    //sets the objectName I am looking to get information from
+    var objectName = `location${i+1}`;
+    //find the array of each object return array
+    var arrHourlyOutput = eval(objectName).totalDailyCookies(operatingHours);
+    console.log(arrHourlyOutput);
+
+    //add in a Header with the Location Name - create / name / id name / append
+    var headerElement = document.createElement('h2');
+    headerElement.textContent = franchiseLocations[i];
+    headerElement.id = 'location';
+    salesSection.appendChild(headerElement);
+    
+    //create ordered list - give id name - append
+    var orderElement = document.createElement('ol');
+    orderElement.id = 'hourlyOutput';
+    salesSection.appendChild(orderElement);
+
+    // loop through my array of hourly output - add li - give text - append
+    for (var j = 0; j < arrHourlyOutput.length; j++){
+        var hourItem = document.createElement('li');
+        hourItem.textContent = arrHourlyOutput[j];
+        orderElement.appendChild(hourItem);
+    };
+}
