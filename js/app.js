@@ -192,7 +192,7 @@ console.log(location5.name +"; " + location5.totalDailyCookies(operatingHours));
 //Here is calling the totalDailyCookies function (***RETURNS an ARRAY***): location1.totalDailyCookies(operatingHours));
 //Here is calling the customerPerHr function  (***RETURNS an RANDOM NUMBER***):   location1.customerPerHr(location1.minCustomers, location1.maxCustomers));
 
-//
+//Here is my section that I want to add my information to...
 var salesSection = document.getElementById('dailySalesByLocation');
 //creating an article for each location;
 // contains header and ordered list
@@ -202,18 +202,23 @@ for(var i = 0; i<franchiseLocations.length; i++){
     var objectName = `location${i+1}`;
     //find the array of each object return array
     var arrHourlyOutput = eval(objectName).totalDailyCookies(operatingHours);
-    console.log(arrHourlyOutput);
+    // console.log(arrHourlyOutput);
+
+    // creates and individual
+    var articleElement = document.createElement('article');
+    articleElement.id = 'reportByLocation';
+    salesSection.appendChild(articleElement);
 
     //add in a Header with the Location Name - create / name / id name / append
     var headerElement = document.createElement('h2');
     headerElement.textContent = franchiseLocations[i];
     headerElement.id = 'location';
-    salesSection.appendChild(headerElement);
+    articleElement.appendChild(headerElement);
     
     //create ordered list - give id name - append
     var orderElement = document.createElement('ol');
     orderElement.id = 'hourlyOutput';
-    salesSection.appendChild(orderElement);
+    articleElement.appendChild(orderElement);
 
     // loop through my array of hourly output - add li - give text - append
     for (var j = 0; j < arrHourlyOutput.length; j++){
