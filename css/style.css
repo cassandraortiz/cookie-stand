@@ -1,8 +1,31 @@
-h1{
-    border: 2px black solid;
-    padding: 5px;
-    margin: 10px;
-    border: 5px;
-    background-color: aqua;
+/* Color selector by image (muted theme)
+
+rgb(217,208,193); - beige
+rgb(217,171,115); - tanish
+rgb(191,117,75); - tan/orangish
+rgb(166,72,51); - dark salmon
+rgb(13,13,13); - black
+
+*/
+
+body{
+    background-color:rgba(217,208,193,.5);  
+    height: 100%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+
+header{
+    border-bottom: 5px solid rgba(13,13,13,.25);
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color:rgb(191,117,75);
+    font-size: 45px;
+}
+
+.salmon{
+    opacity: .25;
+    height: 50px;
+    
+}
+ 
