@@ -92,6 +92,7 @@ var location2 = {
             hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
             totalCookies = totalCookies + hourlyOutput;
         }
+        
         arrOutput.push(`Total: ${totalCookies} cookies`);
         return arrOutput;
     },
