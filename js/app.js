@@ -55,6 +55,7 @@ function tableHeaderSetup(){
         locationTotals[i] = 0;
     };
 };
+
 // ============================================
 
 function Location (name, minCustomers, maxCustomers, avgCookies) {
@@ -69,6 +70,7 @@ function Location (name, minCustomers, maxCustomers, avgCookies) {
 // generates the random number of customers per hour
 Location.prototype.customerPerHr = function(){
     return (Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers);
+
 };
 // calculates the amount of cookies per hour / saves to array
 Location.prototype.calcHourlyCookies = function(){

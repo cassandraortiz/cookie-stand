@@ -6,24 +6,32 @@ rgb(191,117,75); - tan/orangish
 rgb(166,72,51); - dark salmon
 rgb(13,13,13); - black
 
+--reference for Google Font-Family
+font-family: 'Poiret One', cursive;
 */
 
 body{
-    background-color:rgb(243, 238, 230);  
+    background-color:rgb(243, 238, 230); 
     height: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    /*background-image: url("/img/fishlot.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    background-color: rgba(13,13,13,.5);*/
 }
 
 header{
     border: 4px solid rgba(166,72,5);
     padding: 10px;
-    margin: 1% 5% 0% 5%;
+    margin-top: 10px;
     font-size: 45px;
     font-weight: bold;
     color: rgb(166,72,51);
     text-align: center;
     display: inline-flex;
+    font-family: 'Poiret One', cursive;
 }
 
 header h1{
@@ -31,29 +39,59 @@ header h1{
     text-align: center;
 }
 
+#aboutPats{
+    color: rgb(13,13,13);
+    background-color: rgb(191,117,75);
+    font-family: Bookman, URW Bookman L, serif;
+    margin: 30px 10px 10px 10px;
+    padding: 30px;
+    font-size: 18px;
+}
+
+h3{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* this is my Locations Section */
 #locationImages{
-  margin-left: 5%;
+  margin-left: 2%;
+  display: inline-flex;
+  width: 95%;
 }
 
 .cityPic{
-    width: 500px;
-    height: 300px;
+    width: 300px;
+    height: 150px;
+    overflow: hidden;
 }
 
 .imgButton{
     border: 3px rgb(13,13,13) solid;
-    width: fit-content;
+    overflow: hidden;
     font-size: 20px;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 5px 20px 5px;
 }
 
 .imgButton p{
     color: white;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
-    padding: 5px 5px;
+    text-align: center;
+    padding: 5px 15px;
     background-color: rgb(191,117,75);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Poiret One', cursive;
     border-bottom: black 2px double
 }
 
+#hoursOperation{
+    background-color: rgb(191,117,75);
+    padding: 15px;
+    margin-left: 2%; 
+    width: 95%;
+}
+
+#hoursOperation p{
+    padding-bottom: 5px;
+}
