@@ -36,195 +36,103 @@
 
 var operatingHours = ['6am', '7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 var franchiseLocations = ['Seattle','Tokyo','Dubai','Paris','Lima'];
+var allLocations = [];
+var locationTotals = [];
+var tblBody = document.getElementById('salesByLocation');
 
-var location1 = {
-    name: 'Seattle',
-    avgCookies: 6.3, 
-    minCustomers: 23,
-    maxCustomers: 65,
-    customerPerHr: function(min, max){
-        // does the lowest number of a random number max of 0-42 (difference)  ( but adds back in the minium 23 if value is 0)
-        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
-        //console.log(`Here is the random number: ${randomNumber}`);
-        return randomNumber;
-    },
-    totalDailyCookies: function(arr){
-        var hourlyCookies = this.name;
-        var totalCookies = 0;
-        var arrOutput = [];
-        
-        for (var i = 0; i < arr.length; i++){
-            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
-            //console.log(`Index ${i}: cookiesNeeded: ${cookiesNeeded}`);
-            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
-            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
-            //this is my string output result and total tally
-            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
-            totalCookies = totalCookies + hourlyOutput;
-        }
-        //console.log(hourlyCookies + `\nTotal: ${totalCookies} cookies`);
-        arrOutput.push(`Total: ${totalCookies} cookies`);
-        return arrOutput;
-    },
+// =========================================================
+// This is the start setting up my basic Sales Table Header
+// =========================================================
+function tableHeaderSetup(){
+    var tblHeader = document.getElementById('salesTableHeader');
+    var headerEl = document.createElement('th');
+    tblHeader.appendChild(headerEl);
+
+    for (var i = 0; i < operatingHours.length; i++){
+        headerEl = document.createElement('th');
+        headerEl.textContent = operatingHours[i];
+        tblHeader.appendChild(headerEl);
+        locationTotals[i] = 0;
+    };
 };
 
-console.log(location1.name +"; " + location1.totalDailyCookies(operatingHours));
-// Tokyo    |      3     |     24     |        1.2
+// ============================================
 
-var location2 = {
-    name: 'Tokyo',
-    avgCookies: 1.2, 
-    minCustomers: 3,
-    maxCustomers: 24,
-    customerPerHr: function(min, max){
-        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
-        return randomNumber;
-    },
-    totalDailyCookies: function(arr){
-        var hourlyCookies = this.name;
-        var totalCookies = 0;
-        var arrOutput = [];
-        
-        for (var i = 0; i < arr.length; i++){
-            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
-            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
-            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
-            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
-            totalCookies = totalCookies + hourlyOutput;
-        }
-        
-        arrOutput.push(`Total: ${totalCookies} cookies`);
-        return arrOutput;
-    },
+function Location (name, minCustomers, maxCustomers, avgCookies) {
+    this.name = name;
+    this.minCustomers = minCustomers;
+    this.maxCustomers = maxCustomers;
+    this.avgCookies = avgCookies;
+    this.totalDailyCookies = 0;
+    this.hourlyOutput = [];
+    allLocations.push(this);
+}
+// generates the random number of customers per hour
+Location.prototype.customerPerHr = function(){
+    return (Math.floor(Math.random() * (this.maxCustomers - this.minCustomers + 1)) + this.minCustomers);
+
+};
+// calculates the amount of cookies per hour / saves to array
+Location.prototype.calcHourlyCookies = function(){
+    for (var i = 0; i < operatingHours.length; i++){
+        var cookiesPerHour = Math.round(this.customerPerHr() * this.avgCookies);
+        this.hourlyOutput.push(cookiesPerHour);
+        this.totalDailyCookies += cookiesPerHour;
+    }
+};
+// adds the calculated sales/hr to the table
+Location.prototype.addSaleToTable = function(){
+    var tblRow = document.createElement('tr'); // this is my location Row
+    tblBody.appendChild(tblRow);
+    var rowHeader = document.createElement('th'); // this is my location name (header/bold)
+    rowHeader.textContent = this.name;
+    tblRow.appendChild(rowHeader);
+    var col = 1; //starting column location [0] is the location name
+
+    for(var i = 0; i < this.hourlyOutput.length; i++){
+        var tblData = document.createElement('td');
+        tblData.textContent = this.hourlyOutput[i];
+        var cell = tblRow.insertCell(col);
+        cell.textContent = this.hourlyOutput[i];
+        locationTotals[i] = locationTotals[i] + this.hourlyOutput[i];
+        col++;
+    }
 };
 
-console.log(location2.name +"; " + location2.totalDailyCookies(operatingHours));
 
-// Dubai    |      11    |     38     |        3.7
+new Location('Seattle', 23, 65, 6.3);
+new Location('Tokyo', 3, 24, 1.2);
+new Location('Dubai', 11, 38, 3.7);
+new Location('Paris', 20, 38, 2.3);
+new Location('Lima', 2, 16, 4.6);
 
-var location3 = {
-    name: 'Dubai',
-    avgCookies: 3.7, 
-    minCustomers: 11,
-    maxCustomers: 38,
-    customerPerHr: function(min, max){
-        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
-        return randomNumber;
-    },
-    totalDailyCookies: function(arr){
-        var hourlyCookies = this.name;
-        var totalCookies = 0;
-        var arrOutput = [];
-        
-        for (var i = 0; i < arr.length; i++){
-            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
-            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
-            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
-            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
-            totalCookies = totalCookies + hourlyOutput;
-        }
-        arrOutput.push(`Total: ${totalCookies} cookies`);
-        return arrOutput;
-    },
-};
-
-console.log(location3.name +"; " + location3.totalDailyCookies(operatingHours));
-
-// Paris    |      20    |     38     |        2.3
-
-var location4 = {
-    name: 'Paris',
-    avgCookies: 2.3, 
-    minCustomers: 20,
-    maxCustomers: 38,
-    customerPerHr: function(min, max){
-        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
-        return randomNumber;
-    },
-    totalDailyCookies: function(arr){
-        var hourlyCookies = this.name;
-        var totalCookies = 0;
-        var arrOutput = [];
-        
-        for (var i = 0; i < arr.length; i++){
-            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
-            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
-            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
-            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
-            totalCookies = totalCookies + hourlyOutput;
-        }
-        arrOutput.push(`Total: ${totalCookies} cookies`);
-        return arrOutput;
-    },
-};
-
-console.log(location4.name +"; " + location4.totalDailyCookies(operatingHours));
-
-// Lima     |      2     |     16     |        4.6
-
-
-var location5 = {
-    name: 'Lima',
-    avgCookies: 4.6, 
-    minCustomers: 2,
-    maxCustomers: 16,
-    customerPerHr: function(min, max){
-        var randomNumber = Math.floor(Math.random() * (max - min)) + min;
-        return randomNumber;
-    },
-    totalDailyCookies: function(arr){
-        var hourlyCookies = this.name;
-        var totalCookies = 0;
-        var arrOutput = [];
-        for (var i = 0; i < arr.length; i++){
-            var cookiesNeeded = this.customerPerHr(this.minCustomers, this.maxCustomers);
-            var hourlyOutput = Math.round(cookiesNeeded * this.avgCookies);
-            arrOutput[i] = `${arr[i]}: ${hourlyOutput} cookies`;
-            hourlyCookies = hourlyCookies + `\n${arr[i]}: ${hourlyOutput} cookies`
-            totalCookies = totalCookies + hourlyOutput;
-        }
-        arrOutput.push(`Total: ${totalCookies} cookies`);
-        return arrOutput;
-    },
-};
-
-console.log(location5.name +"; " + location5.totalDailyCookies(operatingHours));
-
-//Here is calling the totalDailyCookies function (***RETURNS an ARRAY***): location1.totalDailyCookies(operatingHours));
-//Here is calling the customerPerHr function  (***RETURNS an RANDOM NUMBER***):   location1.customerPerHr(location1.minCustomers, location1.maxCustomers));
-
-//Here is my section that I want to add my information to...
-var salesSection = document.getElementById('dailySalesByLocation');
-//creating an article for each location;
-// contains header and ordered list
-for(var i = 0; i<franchiseLocations.length; i++){
-
-    //sets the objectName I am looking to get information from
-    var objectName = `location${i+1}`;
-    //find the array of each object return array
-    var arrHourlyOutput = eval(objectName).totalDailyCookies(operatingHours);
-    // console.log(arrHourlyOutput);
-
-    // creates and individual
-    var articleElement = document.createElement('article');
-    articleElement.id = 'reportByLocation';
-    salesSection.appendChild(articleElement);
-
-    //add in a Header with the Location Name - create / name / id name / append
-    var headerElement = document.createElement('h2');
-    headerElement.textContent = franchiseLocations[i];
-    headerElement.id = 'location';
-    articleElement.appendChild(headerElement);
+// ============================================
+// This is the completes my total Row on Sales Table
+// ============================================
+function tableFooterSetup(){
+    var tblFooter = document.getElementById('salesTableTotal');
+    var tblRow = document.createElement('tr');
+    tblFooter.appendChild(tblRow);
+    var rowHeader = document.createElement('th'); // this is my location name (header/bold)
+    rowHeader.textContent = 'Totals:';
+    tblRow.appendChild(rowHeader);
+    var col = 1;
     
-    //create ordered list - give id name - append
-    var orderElement = document.createElement('ol');
-    orderElement.id = 'hourlyOutput';
-    articleElement.appendChild(orderElement);
-
-    // loop through my array of hourly output - add li - give text - append
-    for (var j = 0; j < arrHourlyOutput.length; j++){
-        var hourItem = document.createElement('li');
-        hourItem.textContent = arrHourlyOutput[j];
-        orderElement.appendChild(hourItem);
+    for(var i = 0; i < locationTotals.length; i++){
+        var tblData = document.createElement('td');
+        tblData.textContent = locationTotals[i];
+        var cell = tblRow.insertCell(col);
+        cell.textContent = locationTotals[i];
+        col++;
     };
 }
+// ============================================
+
+tableHeaderSetup();
+
+for(var x = 0; x < allLocations.length; x++){
+    allLocations[x].customerPerHr();
+    allLocations[x].calcHourlyCookies();
+    allLocations[x].addSaleToTable();
+}
+tableFooterSetup();

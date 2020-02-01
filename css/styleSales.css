@@ -18,6 +18,32 @@ h1{
     text-align: center;
 }
 
+
+table{
+    margin: 20px;
+    text-align: center;
+}
+tr{
+    border: black 2px solid;
+    width: 80%;
+    margin: 10%;
+}
+
+tr{
+    border: black 2px solid;
+}
+
+td{
+    border: black 2px solid;
+    width: fit-content;
+}
+
+th{
+    border: black 2px solid;
+    width: 60px;
+    background-color: salmon;
+}
+
 #location{
     font-size: 20px;
     font-weight: bold;
@@ -32,3 +58,4 @@ li{
     padding: 2px 15px 2px 15px;
     text-align: left;
 }
+
