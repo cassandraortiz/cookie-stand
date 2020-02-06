@@ -59,6 +59,7 @@ function tableHeaderSetup(){
     };
     headerEl = document.createElement('th');
     headerEl.textContent = 'Total Daily Sales';
+    headerEl.id = 'TotalHeader';
     tblHeader.appendChild(headerEl);
 };
 
@@ -141,8 +142,6 @@ function tableFooterSetup(){
     var col = 1;
     
     for(var i = 0; i < locationTotals.length; i++){
-        // var tblData = document.createElement('td');
-        // tblData.textContent = locationTotals[i];
         var cell = tblRow.insertCell(col);
         cell.textContent = locationTotals[i];
         col++;
