@@ -6,131 +6,130 @@ rgb(166,72,51); - dark salmon
 rgb(13,13,13); - black */
 
 html{
-    color: gray;
-    background-color: rgba(217,208,193, .5)
+    /* color: gray; */
+    background-color: rgba(217,208,193, .5);
+    font-family: 'Poiret One', cursive;
+    color: black;
+    text-align: center;
 }
 
 header{
-    background-color: rgba(191,117,75, .85);
-    padding: 10px 20px;
-    /* display: inline-flex; */
+    background-color: rgba(191,117,75, 1);
     margin-bottom: 30px;
     width: 100%;
-    font-family: 'Poiret One', cursive;
-    position: relative;
-    /* top: 0;
-    height: 70px; */
-    border-bottom: 1px rgba(217,208,193, .5) thin;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
+/* FULL NAV BAR - BOTH LISTS & LOGO
+------------------------------*/
+nav{
+    background-color: rgb(191,117,75);
+    width: 100%;
+    height: fit-content;
+    display: inline-flex;
+    padding: 0% 5%;
+    box-shadow: 0 10px 20px rgba(217,208,193, .95);
+    border: 1px solid   rgb(166,72,51);
+}
+
+
+/* PATS SALMON COOKIES LOGO 
+------------------------------*/
 #logoHeader{
     border: 3px double rgb(166,72,51);
+    margin-top: 2%;
+    margin-bottom: 2%;
     padding: 5px 5px;
     display: inline-flex;
     background-color: rgb(217,208,193);
     margin: 5px 5px;
-    /* position: fixed; */
-    /* top: 5px;  
-    left: 30px;  */
 }
 
-/* #navBar{
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    z-index: 0;
-    /* border: black 1px solid;
-} */
+    #logoHeader img{
+        margin: 5px 20px;
+    }
 
-header img{
-    margin: 5px 20px;
+    #logoHeader h1{
+        font-size: 36px;
+        font-weight: bolder;
+        color: rgb(166,72,51);
+        padding: 15px;
+    }
+
+ul{
+    /* border: 1px solid   rgb(166,72,51); */
+    width: 20%;
+    overflow: hidden;
+    padding: 1% 1%;
+    /* text-align: center; */
 }
-
-header h1{
-    font-size: 36px;
-    font-weight: bolder;
-    color: rgb(166,72,51);
-    padding: 15px;
-}
-
-nav{
-    background-color: rgb(166,72,51);
-    text-align: left;
-    padding: 5px 5px;
-    width: 100%;
-    height: 3%;
-
-    /* border-bottom: rgb(217,208,193) 1px solid; */
-    box-shadow: 0 10px 20px rgba(217,208,193, .95);
-    /* display: inline-flex; */
-    /* margin-right: 20px;
-    margin-left: auto; */
-    position: fixed;
-    left: 0px;
-    top: 0px;
-}
-
 
 li{
-    width: fit-content;
-    display: inline-flex;
-    padding-left: 30px;
+    padding-bottom: 4%;
+    /* padding-bottom: 10px;  */
+} 
+
+li a{
     text-decoration: none;
     color: white;
     font-size: 20px;
+    padding-top: 1%;
 }
 
-link{
-    color: white;
-    text-decoration: none;
+li a:hover{
+    text-decoration: underline;
+    color: blue;
+    font-size: 24px;
 }
 
-body{
+#left_NavBar{
+    text-align: left;
+    
+}
+
+#right_NavBar{
+    text-align: right;
+
+}
+
+/* main{
     position: relative;
     text-align: center;
     margin-top: 120px;
     height: 600px;
     padding-left: 5%;
     padding-right: 5%;
-}
-
-#section1{
-    position: relative;
-}
+} */
 
 
-#aboutPat_section{
+
+/* #aboutPat_section{
     display: inline-flex;
     padding: 30px;
-
-    /* background-color: rgb(166,72,51); */
     margin-top: 20px;
     border: 1px black solid;
-    /* height: 400px; */
-    /* padding: 5px; */
-}
-#section1 #PatsDream{
-    position: absolute;
-    top: 15px;
-}
+} */
 
-img{
+/* #section1 #PatsDream{
+    top: 15px;
+} */
+/* 
+section img{
     border-top: black solid 1px;
     border-left: black solid 1px;
     border-right: black solid 3px;
     border-bottom: black solid 3px;
     box-shadow: black 5px 5px 15px;
     margin: 10px;
-}
+} */
 
-#aboutPat_writeUp {
-    /* display: inline-flex; */
+/* #aboutPat_writeUp {
+    display: inline-flex;
     padding-left: 30px;
     text-align: center;
-}
+} */
 
 
 /* section img{
