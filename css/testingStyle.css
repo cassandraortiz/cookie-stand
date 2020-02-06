@@ -6,21 +6,20 @@ rgb(166,72,51); - dark salmon
 rgb(13,13,13); - black */
 
 html{
-    text-align: center;
     color: gray;
     background-color: rgba(217,208,193, .5)
 }
 
 header{
-    /* background-color: rgba(191,117,75, .85); */
+    background-color: rgba(191,117,75, .85);
     padding: 10px 20px;
-    display: inline-flex;
+    /* display: inline-flex; */
     margin-bottom: 30px;
     width: 100%;
     font-family: 'Poiret One', cursive;
-    position: fixed;
-    top: 0;
-    height: 70px;
+    position: relative;
+    /* top: 0;
+    height: 70px; */
     border-bottom: 1px rgba(217,208,193, .5) thin;
 }
 
@@ -29,20 +28,22 @@ header{
     padding: 5px 5px;
     display: inline-flex;
     background-color: rgb(217,208,193);
-    position: fixed;
-    top: 5px;  
-    left: 30px; 
+    margin: 5px 5px;
+    /* position: fixed; */
+    /* top: 5px;  
+    left: 30px;  */
 }
 
-#navBar{
+/* #navBar{
     background-color: white;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100px;
-    border: black 1px solid;
-}
+    z-index: 0;
+    /* border: black 1px solid;
+} */
 
 header img{
     margin: 5px 20px;
@@ -56,14 +57,20 @@ header h1{
 }
 
 nav{
-    text-align: center;
-    padding-top: 5px;
-    display: inline-flex;
-    margin-right: 20px;
-    margin-left: auto;
+    background-color: rgb(166,72,51);
+    text-align: left;
+    padding: 5px 5px;
+    width: 100%;
+    height: 3%;
+
+    /* border-bottom: rgb(217,208,193) 1px solid; */
+    box-shadow: 0 10px 20px rgba(217,208,193, .95);
+    /* display: inline-flex; */
+    /* margin-right: 20px;
+    margin-left: auto; */
     position: fixed;
-    left: 900px;
-    top: 5px;
+    left: 0px;
+    top: 0px;
 }
 
 
@@ -72,34 +79,68 @@ li{
     display: inline-flex;
     padding-left: 30px;
     text-decoration: none;
-    color: rgb(166,72,51);
+    color: white;
     font-size: 20px;
 }
 
-section{
-    display: inline-flex;
-    width: 100%;
-    background-color: rgb(166,72,51);
-    margin-top: 20px;
-    height: 400px;
-    padding: 5px;
+link{
+    color: white;
+    text-decoration: none;
 }
 
 body{
+    position: relative;
+    text-align: center;
     margin-top: 120px;
     height: 600px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-section img{
+
+#section1{
+    position: relative;
+}
+
+
+#aboutPat_section{
+    display: inline-flex;
+    padding: 30px;
+
+    /* background-color: rgb(166,72,51); */
+    margin-top: 20px;
+    border: 1px black solid;
+    /* height: 400px; */
+    /* padding: 5px; */
+}
+#section1 #PatsDream{
+    position: absolute;
+    top: 15px;
+}
+
+img{
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+    border-right: black solid 3px;
+    border-bottom: black solid 3px;
+    box-shadow: black 5px 5px 15px;
+    margin: 10px;
+}
+
+#aboutPat_writeUp {
+    /* display: inline-flex; */
+    padding-left: 30px;
+    text-align: center;
+}
+
+
+/* section img{
     height: 390px;
     width: 390px;
     margin-left: 10px;
     border: black 1px solid;
     box-shadow: 0px 2px 4px black;
-}
+} */
 
 footer{
-    padding: 10px 30px;
-    background-color: rgba(0, 0, 0, .85);
-    width: 100%;
-    margin-top: 30px;
+    background-color: rgb(166,72,51);
 }
