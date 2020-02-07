@@ -141,6 +141,16 @@ SECTIONS - Section1 (PatsDream)
         text-align: left;
     }
 
+    #colorText {
+        transition: .5s;
+    }
+
+    #colorText:hover {
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
 /*
 SECTION - Section2 (Pats Family)
 ------------------------------*/ 
@@ -195,22 +205,10 @@ SECTION - Section3 (Photos and Merchandise)
     border: 1px solid black;
 }
 
-
-
-/* #aboutPat_writeUp {
-    display: inline-flex;
-    padding-left: 30px;
-    text-align: center;
-} */
-
-
-/* section img{
-    height: 390px;
-    width: 390px;
-    margin-left: 10px;
-    border: black 1px solid;
-    box-shadow: 0px 2px 4px black;
-} */
+button {
+    font-size: 26px;
+    padding: 10px;
+}
 
 footer{
     background-color: rgb(191,117,75);
@@ -223,4 +221,17 @@ footer{
 footer h3{
     font-size: 24px;
     padding-bottom: 10px;
+}
+
+#hoursOpen{
+    display: inline-block;
+    /* border: 1px black solid; */
+    vertical-align: top;
+
+}
+
+
+#flag{
+    display: inline-flex;
+    padding-left: 20px;
 }
