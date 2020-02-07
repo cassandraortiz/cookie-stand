@@ -134,7 +134,7 @@ SECTIONS - Section1 (PatsDream)
 
     #PatsDream{
         position: absolute;
-        background-color: rgba(242, 185, 80,.5);
+        background-color: rgba(78, 62, 32, 0.5);
         z-index: 90;
         width: 45%;
         height: 60%;

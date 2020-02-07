@@ -1,17 +1,35 @@
 
 
-main{
-    width: 90%;
+
+
+
+#formAndSalesSection{
+    display: inline-flex;
+    width: 100%;
+    margin-top: 5%;
+    height: 450px;
+    margin-bottom: 5%;
+    border: 1PX PINK solid;
+}
+/*
+FORM SECTION - TBD 
+========================= */
+#formData{
+    background-color: wheat;
+    border: 1px solid BLACK;
+    width: 35%;
     margin-right: 5%;
-    margin-left: 5%;
 }
 
+#salesSection{
+    width: 65%;
+}
 
 /*
  TABLE - SALES DATA
  ======================= */
 table{
-    margin: 20px;
+    /* margin: 20px; */
     text-align: center;
 }
 tr{
@@ -22,13 +40,15 @@ tr{
 
 td{
     border: black 2px solid;
-    width: fit-content;
+    font-style: italic;
 }
 
 th{
     border: black 2px solid;
-    width: 60px;
-    background-color: salmon;
+    width: 8%;
+    padding: .5%;
+    background-color: rgb(166,72,51);
+    color: white;
 }
 
 #location{
@@ -39,10 +59,11 @@ th{
     padding: 5px 0px 5px 0px;
     text-align: center;
 }
-
+/* 
 li{
     border-bottom: gray 1px solid;   
     padding: 2px 15px 2px 15px;
     text-align: left;
-}
+} */
+
 
