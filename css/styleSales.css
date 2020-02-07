@@ -1,24 +1,15 @@
-h1{
-    background-color:rgb(191,117,75);
-    font-size: 24px;
-    text-align: center;
-    padding: 10px;
-    font-weight: bolder;
-    color: white;
-}
 
-#dailySalesByLocation{
-    text-align: center;
-}
 
-#reportByLocation{
-    border: black 2px solid;
-    margin: 5px;
-    display: inline-block;
-    text-align: center;
+main{
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
 
+/*
+ TABLE - SALES DATA
+ ======================= */
 table{
     margin: 20px;
     text-align: center;
@@ -27,10 +18,6 @@ tr{
     border: black 2px solid;
     width: 80%;
     margin: 10%;
-}
-
-tr{
-    border: black 2px solid;
 }
 
 td{

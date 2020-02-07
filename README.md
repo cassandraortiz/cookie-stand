@@ -62,5 +62,12 @@ In addition to the requirements listed above, please ensure that your project al
 [min/max random](https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range/1527834)
 [color theme extractor](https://color.adobe.com/create/color-wheel)
 
+Adam Owada - paired programmimg for awesome changes for the rainbow text and lgbt logo
+
 **photolinks**
 [fisherman](https://candleberryinn.com/blog/freshwater-fishing-on-cape-cod/)
+[tuna fish](https://candostreet.com/blog-kids/wp-content/uploads/2011/04/Tuna-Fish.jpg)
+[kissyFace](https://www.minnesotamonthly.com/travel-recreation/the-gross-delicious-fish-we-love-to-hate-on-in-walker/)
+[weirdSalmon Girl](https://talesfromweirdland.tumblr.com/post/178969616014/statue-of-rosie-the-salmon-mascot-of-sekiu-wa)
+[baking](https://www.wikihow.com/Make-Twitter-Fail-Whale-Coconut-Cookies)
+[Cookie Monster](https://www.youtube.com/watch?v=oSibbdVj1gI)

@@ -9,6 +9,7 @@ html{
     background-color: rgba(249,246,239,.75);
     font-family: 'Poiret One', cursive;
     color: black; 
+    width: 100%;
 }
 
 /*------------------------------
@@ -20,8 +21,9 @@ header{
     position: fixed;
     top: 0;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 2.5%;
+    padding-top: .5%;
+    padding-right: 2.5%;
     height: 10%;
     box-shadow: 0 10px 20px  rgba(217,208,193, .95);
     border-bottom: 1px solid   rgb(166,72,51);
@@ -31,43 +33,18 @@ header{
     /* FULL NAV BAR - BOTH LISTS & LOGO
     ------------------------------*/
     nav{
-        width: 100%;
-        /* height: fit-content; */
+        width: 95%;
+        margin-right: 2.5%;
         display: inline-flex;
+        text-align: center;
     }
 
-
-    /* PATS SALMON COOKIES LOGO 
-    ------------------------------*/
-    #logoHeader{
-        border: 3px double rgb(166,72,51);
-        margin-top: 1%;
-        margin-bottom: .5%;
-        padding: 5px 5px;
-        display: inline-flex;
-        background-color: rgb(217,208,193);
-        box-shadow: 5px 10px 10PX rgba(80, 34, 24, 0.5);
-    }
-
-        #logoHeader img{
-            margin: 5px 20px;
-        }
-
-        #logoHeader h1{
-            font-size: 36px;
-            font-weight: bolder;
-            color: rgb(166,72,51);
-            padding: 15px;
-        }
     /*------------------------------
 
     Nav Unorderd Lists - Left / Right
     ------------------------------*/   
     ul{
         width: 20%;
-        overflow: hidden;
-        padding: .5% 1%;
-        /* border: 1PX black solid; */
     }
 
     #left_NavBar{
@@ -80,7 +57,7 @@ header{
 
         li{
             padding-top: 1%;
-            padding-bottom: 4%;
+            padding-bottom: 2%;
         } 
 
             li a{
@@ -92,9 +69,42 @@ header{
             li a:hover{
                 text-decoration: underline;
                 color: blue;
-                font-size: 24px;
+                font-size: 22px;
             }
+    /* PATS SALMON COOKIES LOGO 
+    ------------------------------*/
+    #logoHeader{
+        border: 3px double rgb(166,72,51);
+        margin-bottom: .5%;
+        padding: .5% .5%;
+        display: inline-flex;
+        text-align: center;
+        background-color: rgb(217,208,193);
+        width: 75%;
+        height: min-content;
+        box-shadow: 5px 10px 10PX rgba(80, 34, 24, 0.5);
+    }
 
+        #logoHeader img{
+            margin: 1% 1%;
+        }
+
+        #logoHeader h1{
+            font-size: xx-large;
+            font-weight: bolder;
+            color: rgb(166,72,51);
+            width: 100%;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 1%;
+        }
+
+        .fish{
+            min-width: 50px;
+            min-height: auto;
+            max-width: 175px;
+            max-height: auto;
+        }
 /*------------------------------
  - [end] Header Section
 ------------------------------*/
@@ -103,12 +113,13 @@ header{
 BODY SECTION
 ------------------------------*/ 
 main{
-    /* position: relative; */
     text-align: center;
     margin-top: 5.5%;
-    /* height: 600px; */
     padding-left: 5%;
     padding-right: 5%;
+    width: 90%;
+    font-family: 'Open Sans', sans-serif;
+
 }
 
 /*
@@ -117,26 +128,36 @@ SECTIONS - Section1 (PatsDream)
 #section1{
     position: relative;
     display: inline-flex;
+    overflow: hidden;
+    width: 100%;
 }
 
     #PatsDream{
         position: absolute;
-        background-color: rgba(242, 185, 80,.35);
+        background-color: rgba(242, 185, 80,.5);
         z-index: 90;
         width: 45%;
-        height: 35%;
+        height: 60%;
         left: 5%;
-        top: 60%;
+        top: 35%;
         padding: 10px;
+        /* overflow: scroll; */
+        color:rgb(121, 70, 40);
+        text-shadow: gray;
+        font-family: 'Poiret One', cursive;
+        
     }
 
     #PatsDream h3{
-        font-size: 20px;
+        font-size: 24px;
         text-align: left;
+        font-weight: bolder;
+        font-style: oblique;
     }
 
     #PatsDream p{
-        font-size: 18px;
+        font-size: 20px;
+        font-style: oblique;
         padding: 20px;
         text-align: left;
     }
@@ -155,26 +176,36 @@ SECTIONS - Section1 (PatsDream)
 SECTION - Section2 (Pats Family)
 ------------------------------*/ 
 #section2{
-    background-color: rgba(110, 100, 81,.5);
+    background-image: url(/img/wood\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 50%; */
+    /* background-color: rgba(110, 100, 81,.5); */
     display: inline-flex;
-    width: 100%;
-    padding: 15px 30px;
-    margin-top: 30px;
+    width: 80%;
+    padding: 2% 2%;
+    margin-top: 2%;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
 }
 
     #section2 img{
+            width: 45%;
+            height: 45%;
             border-top: black solid 1px;
             border-left: black solid 1px;
             border-right: black solid 3px;
             border-bottom: black solid 3px;
             box-shadow: black 5px 5px 15px;
             margin-right: 5%;
+            margin-top: auto;
+            margin-bottom: auto;
     }
+
 
     #aboutPat_writeUp{
         width: 70%;
         text-align: center;
-        /* border: rgba(80, 34, 24, 0.5) 2px solid; */
         color: white;
         padding-right: 5%;
     }
@@ -190,7 +221,8 @@ SECTION - Section2 (Pats Family)
         #aboutPat_writeUp p{
             font-size: 20px;
             text-align: left;
-            font-weight: normal;
+            font-weight: lighter;
+            font-style: oblique;
             padding-left: 5%;
             padding-bottom: 10px;
         }
@@ -198,24 +230,92 @@ SECTION - Section2 (Pats Family)
 SECTION - Section3 (Photos and Merchandise)
 ------------------------------*/ 
 #section3{
+    margin-top: 2%;
     display: inline-flex;
+    width: 100%;
+    padding: .5%;
+    /* border: 1px black solid; */
+    margin-bottom: 30px;
 }
 
 #photoGallery{
+    border: 1px solid rgb(121, 70, 40);
+    font-family: 'Poiret One', cursive;
+    width: 70%;
+    margin-top: auto;
+    margin-bottom: auto;
+    color:rgb(121, 70, 40);
+    font-size: 30px;
+}
+
+#photoGallery h2{
+    border-bottom: rgb(121, 70, 40) solid 1px;
+    box-shadow: 0 10px 20px  rgba(217,208,193, .95);
+    background-color: rgb(121, 70, 40);
+    color: white;
+    /* width: 100%; */
+    padding: .5%;
+}
+
+#picScroll img{
+    width: 150px;
+    height: 150px;
+    padding: 1%;
+}
+
+#picScroll{
+    display: inline-flex;
+    overflow: scroll;
+    width: 100%;
+
+}
+
+#merchandise{
+    font-family: 'Poiret One', cursive;
+    width: 25%;
+    padding: 1%;
+    margin-left: auto;
+    background-color: white;
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+    border-right: black solid 3px;
+    border-bottom: black solid 3px;
+    box-shadow: black 5px 5px 15px;
+÷}
+
+
+#merchandise img{
+    width: 100%;
     border: 1px solid black;
+    border-top: black solid 2px;
+    border-left: black solid 2px;
+    margin-bottom: 1%;
 }
 
 button {
+    margin: 1%;
     font-size: 26px;
     padding: 10px;
 }
 
+/*
+FOOTER - Hours / Locations
+------------------------------*/ 
 footer{
     background-color: rgb(191,117,75);
     text-align: center;
     color: white;
-    padding: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     font-size: 20px;
+    display: inline-flex;
+    width: 90%;
+}
+
+#flag{
+    width: 10%;
 }
 
 footer h3{
@@ -224,14 +324,17 @@ footer h3{
 }
 
 #hoursOpen{
-    display: inline-block;
-    /* border: 1px black solid; */
-    vertical-align: top;
-
+    text-align: right;
+    padding: .5%;
+    width: 45%;
 }
 
+#locations{
+    width: 45%;
+    text-align: left;
+    padding: .5%;
+}
 
-#flag{
+#locationLink{
     display: inline-flex;
-    padding-left: 20px;
 }
