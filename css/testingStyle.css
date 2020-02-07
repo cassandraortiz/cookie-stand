@@ -6,100 +6,221 @@ rgb(166,72,51); - dark salmon
 rgb(13,13,13); - black */
 
 html{
-    text-align: center;
-    color: gray;
-    background-color: rgba(217,208,193, .5)
-}
-
-header{
-    /* background-color: rgba(191,117,75, .85); */
-    padding: 10px 20px;
-    display: inline-flex;
-    margin-bottom: 30px;
-    width: 100%;
+    background-color: rgba(249,246,239,.75);
     font-family: 'Poiret One', cursive;
-    position: fixed;
-    top: 0;
-    height: 70px;
-    border-bottom: 1px rgba(217,208,193, .5) thin;
+    color: black; 
 }
 
-#logoHeader{
-    border: 3px double rgb(166,72,51);
-    padding: 5px 5px;
-    display: inline-flex;
-    background-color: rgb(217,208,193);
-    position: fixed;
-    top: 5px;  
-    left: 30px; 
-}
-
-#navBar{
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
+/*------------------------------
+HEADER SECTION
+------------------------------*/ 
+header{
+    background-color: rgba(191,117,75, 1);
     width: 100%;
-    height: 100px;
-    border: black 1px solid;
-}
-
-header img{
-    margin: 5px 20px;
-}
-
-header h1{
-    font-size: 36px;
-    font-weight: bolder;
-    color: rgb(166,72,51);
-    padding: 15px;
-}
-
-nav{
-    text-align: center;
-    padding-top: 5px;
-    display: inline-flex;
-    margin-right: 20px;
-    margin-left: auto;
     position: fixed;
-    left: 900px;
-    top: 5px;
+    top: 0;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 10%;
+    box-shadow: 0 10px 20px  rgba(217,208,193, .95);
+    border-bottom: 1px solid   rgb(166,72,51);
+    z-index: 100;
+}
+
+    /* FULL NAV BAR - BOTH LISTS & LOGO
+    ------------------------------*/
+    nav{
+        width: 100%;
+        /* height: fit-content; */
+        display: inline-flex;
+    }
+
+
+    /* PATS SALMON COOKIES LOGO 
+    ------------------------------*/
+    #logoHeader{
+        border: 3px double rgb(166,72,51);
+        margin-top: 1%;
+        margin-bottom: .5%;
+        padding: 5px 5px;
+        display: inline-flex;
+        background-color: rgb(217,208,193);
+        box-shadow: 5px 10px 10PX rgba(80, 34, 24, 0.5);
+    }
+
+        #logoHeader img{
+            margin: 5px 20px;
+        }
+
+        #logoHeader h1{
+            font-size: 36px;
+            font-weight: bolder;
+            color: rgb(166,72,51);
+            padding: 15px;
+        }
+    /*------------------------------
+
+    Nav Unorderd Lists - Left / Right
+    ------------------------------*/   
+    ul{
+        width: 20%;
+        overflow: hidden;
+        padding: .5% 1%;
+        /* border: 1PX black solid; */
+    }
+
+    #left_NavBar{
+        text-align: left;  
+    }
+
+    #right_NavBar{
+        text-align: right;
+    }
+
+        li{
+            padding-top: 1%;
+            padding-bottom: 4%;
+        } 
+
+            li a{
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+            }
+
+            li a:hover{
+                text-decoration: underline;
+                color: blue;
+                font-size: 24px;
+            }
+
+/*------------------------------
+ - [end] Header Section
+------------------------------*/
+
+/*------------------------------
+BODY SECTION
+------------------------------*/ 
+main{
+    /* position: relative; */
+    text-align: center;
+    margin-top: 5.5%;
+    /* height: 600px; */
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+/*
+SECTIONS - Section1 (PatsDream)
+------------------------------*/ 
+#section1{
+    position: relative;
+    display: inline-flex;
+}
+
+    #PatsDream{
+        position: absolute;
+        background-color: rgba(242, 185, 80,.35);
+        z-index: 90;
+        width: 45%;
+        height: 35%;
+        left: 5%;
+        top: 60%;
+        padding: 10px;
+    }
+
+    #PatsDream h3{
+        font-size: 20px;
+        text-align: left;
+    }
+
+    #PatsDream p{
+        font-size: 18px;
+        padding: 20px;
+        text-align: left;
+    }
+
+/*
+SECTION - Section2 (Pats Family)
+------------------------------*/ 
+#section2{
+    background-color: rgba(110, 100, 81,.5);
+    display: inline-flex;
+    width: 100%;
+    padding: 15px 30px;
+    margin-top: 30px;
+}
+
+    #section2 img{
+            border-top: black solid 1px;
+            border-left: black solid 1px;
+            border-right: black solid 3px;
+            border-bottom: black solid 3px;
+            box-shadow: black 5px 5px 15px;
+            margin-right: 5%;
+    }
+
+    #aboutPat_writeUp{
+        width: 70%;
+        text-align: center;
+        /* border: rgba(80, 34, 24, 0.5) 2px solid; */
+        color: white;
+        padding-right: 5%;
+    }
+
+        #aboutPat_writeUp h2{
+            font-size: 30px;
+            text-align: left;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #aboutPat_writeUp p{
+            font-size: 20px;
+            text-align: left;
+            font-weight: normal;
+            padding-left: 5%;
+            padding-bottom: 10px;
+        }
+/*
+SECTION - Section3 (Photos and Merchandise)
+------------------------------*/ 
+#section3{
+    display: inline-flex;
+}
+
+#photoGallery{
+    border: 1px solid black;
 }
 
 
-li{
-    width: fit-content;
+
+/* #aboutPat_writeUp {
     display: inline-flex;
     padding-left: 30px;
-    text-decoration: none;
-    color: rgb(166,72,51);
-    font-size: 20px;
-}
+    text-align: center;
+} */
 
-section{
-    display: inline-flex;
-    width: 100%;
-    background-color: rgb(166,72,51);
-    margin-top: 20px;
-    height: 400px;
-    padding: 5px;
-}
 
-body{
-    margin-top: 120px;
-    height: 600px;
-}
-section img{
+/* section img{
     height: 390px;
     width: 390px;
     margin-left: 10px;
     border: black 1px solid;
     box-shadow: 0px 2px 4px black;
-}
+} */
 
 footer{
-    padding: 10px 30px;
-    background-color: rgba(0, 0, 0, .85);
-    width: 100%;
-    margin-top: 30px;
+    background-color: rgb(191,117,75);
+    text-align: center;
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+}
+
+footer h3{
+    font-size: 24px;
+    padding-bottom: 10px;
 }

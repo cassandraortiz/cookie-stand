@@ -61,3 +61,6 @@ In addition to the requirements listed above, please ensure that your project al
 
 [min/max random](https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range/1527834)
 [color theme extractor](https://color.adobe.com/create/color-wheel)
+
+**photolinks**
+[fisherman](https://candleberryinn.com/blog/freshwater-fishing-on-cape-cod/)
