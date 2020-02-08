@@ -140,13 +140,24 @@ footer p{
     width: 45%;
     text-align: left;
     padding: .5%;
+    /* border: 1px black solid; */
 }
 
 #locations ul {
     display: inline-flex;
+    width: 100%;
+    /* border: 1px black solid; */
+
 }
 
 #locationList li{
     margin-right: 10%;
+    font-size: 14px;
+    text-decoration: none;
+    color: cornsilk;
+    width: fit-content;
+    /* padding: 2px; */
+    /* width: 100%; */
+    /* border: 1px black solid */
 }
 
