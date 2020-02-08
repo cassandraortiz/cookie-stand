@@ -22,6 +22,7 @@ SECTION - FORM SECTION
         height: 35%;
         margin-right: auto;
         margin-left: auto;
+        text-align: left;
     }
 
     #formData  h2{
@@ -30,6 +31,35 @@ SECTION - FORM SECTION
         font-size: 18px;
         text-align: left;
         color: white;
+        border-bottom: rgb(166,72,51);
+        box-shadow: 0px 2px 5px black;
+    }
+
+    #locationAdd-form{
+        /* text-align: center; */
+        display: inline-block;
+    }
+
+    #locationAdd-fs{        
+        margin-top: 1%;
+        width: 95%;
+        margin: 1%;
+        display: inline-flex;
+    }
+
+    #CustomerInfo{
+        display: inline-block;
+    }
+
+    label{
+        padding: .5%;
+    }
+
+    #locationCustomers-fs{
+        margin: 1%;
+        width: 100%;
+        border: black 1px solid; 
+        display: inline-flex;
     }
 
 /* ------------------------------

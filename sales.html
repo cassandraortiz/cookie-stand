@@ -29,9 +29,26 @@
         <main>
             <!-- <div id="formAndSalesSection"> -->
                 <section id="formData">
-                    <h2>Form Information</h2>
-                    <p></p>
-                </section>
+                    <h2>Add New Location</h2>
+                    <form id="locationAdd-form">
+                        <fieldset id='locationAdd-fs'>
+                            <label>Location City:</label>
+                            <input id='elCity' type='text' placeholder='City Name'></input>
+                            <fieldset id="locationCustomers-fs">
+                                <label>Hourly Customer Information</label>
+                                <div id='CustomerInfo'>
+                                    <label>Max Customers:</label>
+                                    <input id='elMax' type='text' placeholder='(##) Maximum Hourly Customers'></input>
+                                    <label>Min Customers:</label>
+                                    <input id='elMin' type='text' placeholder='(##) Minimun Hourly Customers'></input>                            
+                                    <label>Avg Cookies Sold:</label>
+                                    <input id='elAvg' type='text' placeholder='(##) Avgerage Cookies Sales'></input>                            
+                                </div>
+                            </fieldset>
+                            <button >Add Location</button>    
+                        </fieldset>
+                    </form>
+                    </section>
                 <section id="salesSection">
                     <table id="salesTable">
                         <thead id="salesTableHeader">

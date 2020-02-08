@@ -1,5 +1,5 @@
 'use strict';
-// LAB 07 
+// LAB 09
 // ==============================
 // 1. Replace all of your object literals for the salmon cookie stand with a single constructor function that, when called with the 'new' keyword, it creates a new instance.
 
@@ -138,6 +138,7 @@ function tableFooterSetup(){
 
     var rowHeader = document.createElement('th'); 
     rowHeader.textContent = 'Totals:';
+    rowHeader.id = 'totalsRow';
     tblRow.appendChild(rowHeader);
     var col = 1;
     
@@ -152,6 +153,11 @@ function tableFooterSetup(){
     cell.textContent = grandTotal;
 }
 
+function tableFooterRemove{
+    var tblFooterRow = document.getElementById('totalsRow');
+
+}
+
 // ============================================
 // Invoke the functions
 // ============================================
@@ -164,3 +170,49 @@ for(var x = 0; x < allLocations.length; x++){
 }
 
 tableFooterSetup();
+
+// DEMO Class Code
+// var userForm = document.getElementById('user-form');
+// var userData = [];
+
+// userForm.addEventListener('submit', handleSubmit);
+
+// //can use 'e' for the arguement as well instead of 'event'
+// function handleSubmit(e){
+//     e.preventDefault();
+//     var name = e.target.elementName.value;
+//     var age = e.target.elementAge.value;
+//     var email = e.target.elementEmail.value
+    
+//     userData.push(name, age, email);
+
+//     console.log(userData);
+
+//     e.target.elementName.value = null;
+//     e.target.elementAge.value = null;
+//     e.target.elementEmail.value = null;
+// }
+
+
+var locationForm = document.getElementById('locationAdd-form');
+
+locationForm.addEventListener('submit', addLocation);
+
+
+
+function addLocation(event){
+    event.preventDefault();
+    var locationName = event.target.elCity.value;
+    var locationMax = parseint(event.target.elMax.value); 
+    var locationMin = parseint(event.target.elMin.value);
+    var locationAvg = parseint(event.target.elAvg.value);
+
+    new Location(locationName,locationMin, locationMax, locationAvg);
+    
+    var x = allLocations.length-1;
+
+    allLocations[x].addSaleToTable();
+    document.getElementById('totalsRow').deleteRow(0);
+    tableFooterSetup();
+    
+}
