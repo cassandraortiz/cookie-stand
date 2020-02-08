@@ -1,0 +1,152 @@
+
+html{
+    background-color: rgba(249,246,239,.75);
+    font-family: 'Poiret One', cursive;
+    color: black; 
+    width: 100%;
+}
+
+/*------------------------------
+HEADER SECTION
+------------------------------*/ 
+header{
+    background-color: rgba(191,117,75, 1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-align: center;
+    padding-left: 2.5%;
+    padding-top: .5%;
+    padding-right: 2.5%;
+    height: 10%;
+    box-shadow: 0 10px 20px  rgba(217,208,193, .95);
+    border-bottom: 1px solid   rgb(166,72,51);
+    z-index: 100;
+}
+
+    /* FULL NAV BAR - BOTH LISTS & LOGO
+    ------------------------------*/
+    nav{
+        width: 95%;
+        margin-right: 2.5%;
+        display: inline-flex;
+        text-align: center;
+    }
+
+    /*------------------------------
+
+    Nav Unorderd Lists - Left / Right
+    ------------------------------*/   
+    ul{
+        width: 20%;
+    }
+
+    #left_NavBar{
+        text-align: left;  
+    }
+
+    #right_NavBar{
+        text-align: right;
+    }
+
+        li{
+            padding-top: 1%;
+            padding-bottom: 2%;
+        } 
+
+            li a{
+                text-decoration: none;
+                color: white;
+                font-size: 20px;
+            }
+
+            li a:hover{
+                text-decoration: underline;
+                color: blue;
+                font-size: 22px;
+            }
+    /* PATS SALMON COOKIES LOGO 
+    ------------------------------*/
+    #logoHeader{
+        border: 3px double rgb(166,72,51);
+        margin-bottom: .5%;
+        padding: .5% .5%;
+        display: inline-flex;
+        text-align: center;
+        background-color: rgb(217,208,193);
+        width: 75%;
+        height: min-content;
+        box-shadow: 5px 10px 10PX rgba(80, 34, 24, 0.5);
+    }
+
+        #logoHeader img{
+            margin: 1% 1%;
+        }
+
+        #logoHeader h1{
+            font-size: xx-large;
+            font-weight: bolder;
+            color: rgb(166,72,51);
+            width: 100%;
+            margin-top: auto;
+            margin-bottom: auto;
+            padding: 1%;
+        }
+
+        .fish{
+            min-width: 50px;
+            min-height: auto;
+            max-width: 175px;
+            max-height: auto;
+        }
+/*------------------------------
+ - [end] Header Section
+------------------------------*/
+
+
+
+/*------------------------------
+FOOTER - Hours / Locations
+------------------------------*/ 
+footer{
+    background-color: rgb(191,117,75);
+    text-align: center;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-size: 20px;
+    display: inline-flex;
+    width: 90%;
+}
+
+footer h3{
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+#hoursOpen{
+    text-align: right;
+    padding: .25%;
+    width: 45%;
+}
+
+footer p{
+    font-size: 18px;
+}
+
+#locations{
+    width: 45%;
+    text-align: left;
+    padding: .5%;
+}
+
+#locations ul {
+    display: inline-flex;
+}
+
+#locationList li{
+    margin-right: 10%;
+}
+

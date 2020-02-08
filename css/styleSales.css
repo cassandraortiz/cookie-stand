@@ -1,61 +1,128 @@
-h1{
-    background-color:rgb(191,117,75);
-    font-size: 24px;
+/*------------------------------
+BODY
+------------------------------*/ 
+main{
     text-align: center;
-    padding: 10px;
-    font-weight: bolder;
-    color: white;
+    /* margin-top: 10px; */
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    max-width: 960;
+    height: 472px;
+    margin-bottom: 2.5%;
+    font-family: 'Open Sans', sans-serif;
 }
 
-#dailySalesByLocation{
-    text-align: center;
-}
+/* ------------------------------
+SECTION - FORM SECTION
+------------------------------*/ 
+    #formData{
+        background-color: rgba(166,72,51, .5);
+        border: 1px solid BLACK;
+        margin-top: 125px;
+        height: 35%;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
-#reportByLocation{
-    border: black 2px solid;
-    margin: 5px;
-    display: inline-block;
-    text-align: center;
-}
+    #formData  h2{
+        background-color: rgba(166,72,51, .85);
+        padding: 5px;
+        font-size: 18px;
+        text-align: left;
+        color: white;
+    }
 
-
+/* ------------------------------
+TABLE - SALES DATA
+------------------------------*/
 table{
-    margin: 20px;
+    text-align: center;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------
+- TABLE HEAD
+ID: salesTableHeader
+ | TH | TOTAL: TotalHeader |
+---------------
+*/
+#salesTableHeader th{
+    padding: 10px;
+    border: black 2px solid;
+    background-color: rgb(166,72,51);
+    color: white;
+    /* max-width: 10%; */
     text-align: center;
 }
-tr{
+
+/* ------------------------------
+- TABLE BODY (TR: BY EACH LOCATION)
+ID: salesByLocation
+ | HEADER | DATA | TOTAL : locationTotals |
+ ---------------
+*/
+
+#salesByLocation th{
+    width: 10%;
+    font-size: 16px;
+    text-align: left;
+    background-color: rgba(166,72,51,.60);
+    color: white;
+    padding: 7.5px;
     border: black 2px solid;
-    width: 80%;
-    margin: 10%;
 }
 
-tr{
+#salesByLocation td{
     border: black 2px solid;
-}
-
-td{
-    border: black 2px solid;
+    padding-top: .5%;
+    padding-bottom: .25%;
+    font-style: italic;
+    /* padding: 5px; */
     width: fit-content;
 }
 
-th{
-    border: black 2px solid;
-    width: 60px;
-    background-color: salmon;
-}
-
-#location{
+#locationTotals{
     font-size: 20px;
     font-weight: bold;
-    background-color: gray;
+    width: fit-content;
     border-bottom: black 2px solid;
-    padding: 5px 0px 5px 0px;
     text-align: center;
 }
 
-li{
-    border-bottom: gray 1px solid;   
-    padding: 2px 15px 2px 15px;
-    text-align: left;
+/* ------------------------------
+- TABLE FOOT (TR: BY EACH LOCATION)
+ID: salesTableTotal
+ | HEADER | DATA | TOTAL : grandTotal |
+ ---------------
+*/
+
+
+#salesTableTotal th {
+    background-color: rgba(166,72,51,.75);
+    border: black 2PX solid;
 }
+
+
+#salesTableTotal td{
+    font-size: 24px;
+    color: green;
+    width: fit-content;
+    padding: 10PX;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: black 2PX solid;
+    background-color: rgba(166,72,51,.75);
+
+}
+
+#grandTotal{
+    font-size: 30px;
+    padding: 10PX;
+    color: red;
+    width: fit-content;
+}
+
+
 
