@@ -1,69 +1,128 @@
-
-
-
-
-
-#formAndSalesSection{
-    display: inline-flex;
-    width: 100%;
-    margin-top: 5%;
-    height: 450px;
-    margin-bottom: 5%;
-    border: 1PX PINK solid;
-}
-/*
-FORM SECTION - TBD 
-========================= */
-#formData{
-    background-color: wheat;
-    border: 1px solid BLACK;
-    width: 35%;
-    margin-right: 5%;
-}
-
-#salesSection{
-    width: 65%;
-}
-
-/*
- TABLE - SALES DATA
- ======================= */
-table{
-    /* margin: 20px; */
+/*------------------------------
+BODY
+------------------------------*/ 
+main{
     text-align: center;
-}
-tr{
-    border: black 2px solid;
-    width: 80%;
-    margin: 10%;
-}
-
-td{
-    border: black 2px solid;
-    font-style: italic;
+    /* margin-top: 10px; */
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    max-width: 960;
+    height: 472px;
+    margin-bottom: 2.5%;
+    font-family: 'Open Sans', sans-serif;
 }
 
-th{
+/* ------------------------------
+SECTION - FORM SECTION
+------------------------------*/ 
+    #formData{
+        background-color: rgba(166,72,51, .5);
+        border: 1px solid BLACK;
+        margin-top: 125px;
+        height: 35%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #formData  h2{
+        background-color: rgba(166,72,51, .85);
+        padding: 5px;
+        font-size: 18px;
+        text-align: left;
+        color: white;
+    }
+
+/* ------------------------------
+TABLE - SALES DATA
+------------------------------*/
+table{
+    text-align: center;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ---------------
+- TABLE HEAD
+ID: salesTableHeader
+ | TH | TOTAL: TotalHeader |
+---------------
+*/
+#salesTableHeader th{
+    padding: 10px;
     border: black 2px solid;
-    width: 8%;
-    padding: .5%;
     background-color: rgb(166,72,51);
     color: white;
-}
-
-#location{
-    font-size: 20px;
-    font-weight: bold;
-    background-color: gray;
-    border-bottom: black 2px solid;
-    padding: 5px 0px 5px 0px;
+    /* max-width: 10%; */
     text-align: center;
 }
-/* 
-li{
-    border-bottom: gray 1px solid;   
-    padding: 2px 15px 2px 15px;
+
+/* ------------------------------
+- TABLE BODY (TR: BY EACH LOCATION)
+ID: salesByLocation
+ | HEADER | DATA | TOTAL : locationTotals |
+ ---------------
+*/
+
+#salesByLocation th{
+    width: 10%;
+    font-size: 16px;
     text-align: left;
-} */
+    background-color: rgba(166,72,51,.60);
+    color: white;
+    padding: 7.5px;
+    border: black 2px solid;
+}
+
+#salesByLocation td{
+    border: black 2px solid;
+    padding-top: .5%;
+    padding-bottom: .25%;
+    font-style: italic;
+    /* padding: 5px; */
+    width: fit-content;
+}
+
+#locationTotals{
+    font-size: 20px;
+    font-weight: bold;
+    width: fit-content;
+    border-bottom: black 2px solid;
+    text-align: center;
+}
+
+/* ------------------------------
+- TABLE FOOT (TR: BY EACH LOCATION)
+ID: salesTableTotal
+ | HEADER | DATA | TOTAL : grandTotal |
+ ---------------
+*/
+
+
+#salesTableTotal th {
+    background-color: rgba(166,72,51,.75);
+    border: black 2PX solid;
+}
+
+
+#salesTableTotal td{
+    font-size: 24px;
+    color: green;
+    width: fit-content;
+    padding: 10PX;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: black 2PX solid;
+    background-color: rgba(166,72,51,.75);
+
+}
+
+#grandTotal{
+    font-size: 30px;
+    padding: 10PX;
+    color: red;
+    width: fit-content;
+}
+
 
 

@@ -1,0 +1,194 @@
+/*------------------------------
+BODY
+------------------------------*/ 
+main{
+    text-align: center;
+    margin-top: 5.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ------------------------------
+SECTION - Section1 (PatsDream)
+------------------------------*/ 
+#section1{
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    width: 80%;
+}
+
+/* #section1 img{
+    max-width: 960px;
+    width: 100%;
+} */
+
+    #PatsDream{
+        position: absolute;
+        background-color: rgba(221, 158, 41, 0.5);
+        z-index: 90;
+        width: 45%;
+        height: 60%;
+        left: 5%;
+        top: 35%;
+        padding: 10px;
+        color:rgb(121, 70, 40);
+        text-shadow: gray;
+        font-family: 'Poiret One', cursive;
+        
+    }
+
+    #PatsDream h3{
+        font-size: 24px;
+        text-align: left;
+        font-weight: bolder;
+        font-style: oblique;
+    }
+
+    #PatsDream p{
+        font-size: 20px;
+        font-style: oblique;
+        padding: 20px;
+        text-align: left;
+    }
+
+    #colorText {
+        transition: .5s;
+    }
+
+    #colorText:hover {
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+/* ------------------------------
+SECTION - Section2 (Pats Family)
+------------------------------*/ 
+#section2{
+    background-image: url(/img/wood\ background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-flex;
+    width: 80%;
+    padding: 2% 2%;
+    margin-top: 2%;
+    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
+}
+
+    #section2 img{
+            width: 45%;
+            height: 45%;
+            border-top: black solid 1px;
+            border-left: black solid 1px;
+            border-right: black solid 3px;
+            border-bottom: black solid 3px;
+            box-shadow: black 5px 5px 15px;
+            margin-right: 5%;
+            margin-top: auto;
+            margin-bottom: auto;
+    }
+
+
+    #aboutPat_writeUp{
+        width: 70%;
+        text-align: center;
+        color: white;
+        padding-right: 5%;
+    }
+
+        #aboutPat_writeUp h2{
+            font-size: 30px;
+            text-align: left;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #aboutPat_writeUp p{
+            font-size: 20px;
+            text-align: left;
+            font-weight: lighter;
+            font-style: oblique;
+            padding-left: 5%;
+            padding-bottom: 10px;
+        }
+
+/* ------------------------------
+SECTION - Section3 (Photos and Merchandise)
+------------------------------*/ 
+#section3{
+    margin-top: 2%;
+    display: inline-flex;
+    width: 100%;
+    padding: .5%;
+    margin-bottom: 30px;
+}
+
+    /*
+    PHOTO GALLERY
+    ------------------------------*/ 
+    #photoGallery{
+        border: 1px solid rgb(121, 70, 40);
+        font-family: 'Poiret One', cursive;
+        width: 70%;
+        margin-top: auto;
+        margin-bottom: auto;
+        color:rgb(121, 70, 40);
+        font-size: 30px;
+    }
+
+        #photoGallery h2{
+            border-bottom: rgb(121, 70, 40) solid 1px;
+            box-shadow: 0 10px 20px  rgba(217,208,193, .95);
+            background-color: rgb(121, 70, 40);
+            color: white;
+            padding: .5%;
+        }
+
+        #picScroll img{
+            width: 150px;
+            height: 150px;
+            padding: 1%;
+        }
+
+        #picScroll{
+            display: inline-flex;
+            overflow: scroll;
+            width: 100%;
+
+        }
+
+    /*
+    MERCHANDISE
+    ------------------------------*/ 
+    #merchandise{
+        font-family: 'Poiret One', cursive;
+        width: 25%;
+        padding: 1%;
+        margin-left: auto;
+        background-color: white;
+        border-top: black solid 1px;
+        border-left: black solid 1px;
+        border-right: black solid 3px;
+        border-bottom: black solid 3px;
+        box-shadow: black 5px 5px 15px;
+    }
+
+
+    #merchandise img{
+        width: 100%;
+        border: 1px solid black;
+        border-top: black solid 2px;
+        border-left: black solid 2px;
+        margin-bottom: 1%;
+    }
+
+    button {
+        margin: 1%;
+        font-size: 26px;
+        padding: 10px;
+    }
