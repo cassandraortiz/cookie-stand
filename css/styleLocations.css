@@ -1,0 +1,17 @@
+/*------------------------------
+BODY
+------------------------------*/ 
+main{
+    text-align: center;
+    /* margin-top: 10px; */
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    max-width: 960;
+    height: 472px;
+    margin-bottom: 2.5%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* ------------------------------
+SECTION - FORM SECTION
+------------------------------*/ 
