@@ -7,7 +7,8 @@ main{
     padding-left: 2.5%;
     padding-right: 2.5%;
     max-width: 960;
-    height: 472px;
+    min-height: 472px;
+    /* overflow: scroll; */
     margin-bottom: 2.5%;
     font-family: 'Open Sans', sans-serif;
 }
@@ -42,7 +43,7 @@ SECTION - FORM SECTION
 
     #locationAdd-fs{        
         margin-top: 1%;
-        width: 95%;
+        width: 100%;
         margin: 1%;
         display: inline-flex;
     }

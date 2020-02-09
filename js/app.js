@@ -153,10 +153,6 @@ function tableFooterSetup(){
     cell.textContent = grandTotal;
 }
 
-function tableFooterRemove{
-    var tblFooterRow = document.getElementById('totalsRow');
-
-}
 
 // ============================================
 // Invoke the functions
@@ -171,48 +167,34 @@ for(var x = 0; x < allLocations.length; x++){
 
 tableFooterSetup();
 
-// DEMO Class Code
-// var userForm = document.getElementById('user-form');
-// var userData = [];
 
-// userForm.addEventListener('submit', handleSubmit);
-
-// //can use 'e' for the arguement as well instead of 'event'
-// function handleSubmit(e){
-//     e.preventDefault();
-//     var name = e.target.elementName.value;
-//     var age = e.target.elementAge.value;
-//     var email = e.target.elementEmail.value
-    
-//     userData.push(name, age, email);
-
-//     console.log(userData);
-
-//     e.target.elementName.value = null;
-//     e.target.elementAge.value = null;
-//     e.target.elementEmail.value = null;
-// }
-
-
+// ============================================
+// locationAdd - Add new Row to SalesTable
+// ============================================
 var locationForm = document.getElementById('locationAdd-form');
-
 locationForm.addEventListener('submit', addLocation);
-
-
 
 function addLocation(event){
     event.preventDefault();
     var locationName = event.target.elCity.value;
-    var locationMax = parseint(event.target.elMax.value); 
-    var locationMin = parseint(event.target.elMin.value);
-    var locationAvg = parseint(event.target.elAvg.value);
+    var locationMax = parseInt(event.target.elMax.value); 
+    var locationMin = parseInt(event.target.elMin.value);
+    var locationAvg = parseInt(event.target.elAvg.value);
 
     new Location(locationName,locationMin, locationMax, locationAvg);
     
     var x = allLocations.length-1;
 
+    allLocations[x].customerPerHr();
+    allLocations[x].calcHourlyCookies();
     allLocations[x].addSaleToTable();
-    document.getElementById('totalsRow').deleteRow(0);
+
+    document.getElementById('salesTableTotal').deleteRow(0);
     tableFooterSetup();
-    
+
+    event.target.elCity.value = null;
+    event.target.elMax.value = null;
+    event.target.elMin.value = null;
+    event.target.elAvg.value = null;
 }
+

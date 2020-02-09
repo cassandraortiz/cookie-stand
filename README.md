@@ -61,6 +61,7 @@ In addition to the requirements listed above, please ensure that your project al
 
 [min/max random](https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range/1527834)
 [color theme extractor](https://color.adobe.com/create/color-wheel)
+[delete table row](https://www.w3schools.com/jsref/met_table_deleterow.asp)
 
 Adam Owada - paired programmimg for awesome changes for the rainbow text and lgbt logo
 
