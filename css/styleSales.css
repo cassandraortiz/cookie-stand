@@ -20,7 +20,8 @@ SECTION - FORM SECTION
         background-color: rgba(166,72,51, .5);
         border: 1px solid BLACK;
         margin-top: 125px;
-        height: 35%;
+        min-height: 35%;
+        height: max-content;
         margin-right: auto;
         margin-left: auto;
         text-align: left;
@@ -37,30 +38,38 @@ SECTION - FORM SECTION
     }
 
     #locationAdd-form{
-        /* text-align: center; */
+        width: 100%;
         display: inline-block;
+        text-align: left;
+        padding: 1%;
     }
 
     #locationAdd-fs{        
-        margin-top: 1%;
-        width: 100%;
-        margin: 1%;
-        display: inline-flex;
+        width: 98%;
+        padding-bottom: .5%;
+
     }
 
     #CustomerInfo{
         display: inline-block;
     }
 
-    label{
-        padding: .5%;
+    input{
+        padding: 5px;
+        font-size: 14px;
     }
 
     #locationCustomers-fs{
-        margin: 1%;
+        /* margin: 1%; */
         width: 100%;
-        border: black 1px solid; 
+        /* border: black 1px solid;  */
         display: inline-flex;
+    }
+
+    button{
+        margin-left: 2%;
+        padding: 5px;
+        font-size: 18px;
     }
 
 /* ------------------------------
