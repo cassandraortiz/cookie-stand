@@ -1,5 +1,5 @@
 'use strict';
-// LAB 07 
+// LAB 09
 // ==============================
 // 1. Replace all of your object literals for the salmon cookie stand with a single constructor function that, when called with the 'new' keyword, it creates a new instance.
 
@@ -138,6 +138,7 @@ function tableFooterSetup(){
 
     var rowHeader = document.createElement('th'); 
     rowHeader.textContent = 'Totals:';
+    rowHeader.id = 'totalsRow';
     tblRow.appendChild(rowHeader);
     var col = 1;
     
@@ -152,6 +153,7 @@ function tableFooterSetup(){
     cell.textContent = grandTotal;
 }
 
+
 // ============================================
 // Invoke the functions
 // ============================================
@@ -164,3 +166,35 @@ for(var x = 0; x < allLocations.length; x++){
 }
 
 tableFooterSetup();
+
+
+// ============================================
+// locationAdd - Add new Row to SalesTable
+// ============================================
+var locationForm = document.getElementById('locationAdd-form');
+locationForm.addEventListener('submit', addLocation);
+
+function addLocation(event){
+    event.preventDefault();
+    var locationName = event.target.elCity.value;
+    var locationMax = parseInt(event.target.elMax.value); 
+    var locationMin = parseInt(event.target.elMin.value);
+    var locationAvg = parseInt(event.target.elAvg.value);
+
+    new Location(locationName,locationMin, locationMax, locationAvg);
+    
+    var x = allLocations.length-1;
+
+    allLocations[x].customerPerHr();
+    allLocations[x].calcHourlyCookies();
+    allLocations[x].addSaleToTable();
+
+    document.getElementById('salesTableTotal').deleteRow(0);
+    tableFooterSetup();
+
+    event.target.elCity.value = null;
+    event.target.elMax.value = null;
+    event.target.elMin.value = null;
+    event.target.elAvg.value = null;
+}
+
