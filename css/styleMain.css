@@ -63,7 +63,6 @@ header{
             li a:hover{
                 text-decoration: underline;
                 color: blue;
-                font-size: 22px;
             }
     /* PATS SALMON COOKIES LOGO 
     ------------------------------*/
@@ -140,14 +139,11 @@ footer p{
     width: 45%;
     text-align: left;
     padding: .5%;
-    /* border: 1px black solid; */
 }
 
 #locations ul {
     display: inline-flex;
     width: 100%;
-    /* border: 1px black solid; */
-
 }
 
 #locationList li{
@@ -156,8 +152,5 @@ footer p{
     text-decoration: none;
     color: cornsilk;
     width: fit-content;
-    /* padding: 2px; */
-    /* width: 100%; */
-    /* border: 1px black solid */
 }
 

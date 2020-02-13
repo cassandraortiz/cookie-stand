@@ -115,7 +115,7 @@ Location.prototype.addSaleToTable = function(){
     cell = tblRow.insertCell(col);                  // create a cell - insert that cell in specific index location
     cell.textContent = this.totalDailyCookies;      // give that cell total sales per location
     cell.id = "locationTotals";
-    grandTotal += this.totalDailyC3ookies;           // increasing grand total
+    grandTotal += this.totalDailyCookies;           // increasing grand total
 };
 
 // ============================================
@@ -177,29 +177,35 @@ locationForm.addEventListener('submit', addLocation);
 function addLocation(event){
     event.preventDefault();
 
-    var cheking = validateNull();
+    // involks validation function - if all fields are entered (returns boolean)
+    var checking = validateNull();  
 
-    console.log('checking: ' + cheking);
-
-    var locationName = event.target.elCity.value;
-    var locationMax = parseInt(event.target.elMax.value); 
-    var locationMin = parseInt(event.target.elMin.value);
-    var locationAvg = parseInt(event.target.elAvg.value);
-
-    new Location(locationName,locationMin, locationMax, locationAvg);
+    // false: fields are NOT all entered
+    if(! checking){
+        alert("You will need to enter in all the form fields to continue");
     
-    var x = allLocations.length-1;
-
-    allLocations[x].customerPerHr();
-    allLocations[x].calcHourlyCookies();
-    allLocations[x].addSaleToTable();
-
-    document.getElementById('salesTableTotal').deleteRow(0);
-    tableFooterSetup();
-
-    event.target.elCity.value = null;
-    event.target.elMax.value = null;
-    event.target.elMin.value = null;
-    event.target.elAvg.value = null;
+    // true: all fields are entered correctly - proceed with adding object/row
+    } else {
+        var locationName = event.target.elCity.value;
+        var locationMax = parseInt(event.target.elMax.value); 
+        var locationMin = parseInt(event.target.elMin.value);
+        var locationAvg = parseInt(event.target.elAvg.value);
+    
+        new Location(locationName,locationMin, locationMax, locationAvg);
+        
+        var x = allLocations.length-1;
+    
+        allLocations[x].customerPerHr();
+        allLocations[x].calcHourlyCookies();
+        allLocations[x].addSaleToTable();
+    
+        document.getElementById('salesTableTotal').deleteRow(0);
+        tableFooterSetup();
+    
+        event.target.elCity.value = null;
+        event.target.elMax.value = null;
+        event.target.elMin.value = null;
+        event.target.elAvg.value = null;
+    };
 }
 

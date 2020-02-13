@@ -34,13 +34,11 @@ function validateCity(event){
 function validateNull(){
     var ele = locationForm.elements;
     var verified = true; 
-    console.log('length: ' + ele.length);
     for (var e = 0; e < ele.length; e++){
-        if(ele[e].type = 'text'){
-            alert('good job!')
+        if(ele[e].type === 'text' && ele[e].value === ""){
+            verified = false;
         }
     }
-    console.log(verified);
     return verified;
 }
 // ============================================
