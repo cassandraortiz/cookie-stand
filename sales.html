@@ -30,20 +30,21 @@
                 <section id="formData">
                     <h2>Add New Location</h2>
                     <form id="locationAdd-form">
-                        <fieldset id='locationAdd-fs'>
-                            <label>Location City:</label>
+                        <fieldset id='locationAdd'>
+                            <label class="header">Location City</label>
                             <input id='elCity' type='text' placeholder='City Name'></input>
-                            <!-- <fieldset id="locationCustomers-fs"> -->
-                                <div id='CustomerInfo'>
-                                    <label>Max Customers:</label>
-                                    <input id='elMax' type='text' placeholder='(##) Max Per Hr'></input>
-                                    <label>Min Customers:</label>
-                                    <input id='elMin' type='text' placeholder='(##) Min Per Hr'></input>                            
-                                    <label>Avg Cookies Sold:</label>
-                                    <input id='elAvg' type='text' placeholder='(##) Cookies/Customer'></input>                            
-                                </div>
-                            <!-- </fieldset> -->
-                            <button >Add Location</button>    
+                        </fieldset>
+                        <fieldset id="CustomerInfo">
+                            <div id="locationCustomers">
+                                <label class="header">Customer Information </label>
+                                <label>Max:<input id='elMax' type='text' placeholder='(##) Max Per Hr'></input></label>
+                                <label>Min:<input id='elMin' type='text' placeholder='(##) Min Per Hr'></input></label>
+                            </div>
+                            <div id="AvgCookies-Submit">
+                                <label class="header">Avg Cookies Sold</label>
+                                <input id='elAvg' type='text' placeholder='(##) Cookies/Customer'></input>                                                 
+                            </div>
+                            <button>Add Location</button>    
                         </fieldset>
                     </form>
                     </section>

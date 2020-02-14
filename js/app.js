@@ -177,13 +177,16 @@ locationForm.addEventListener('submit', addLocation);
 function addLocation(event){
     event.preventDefault();
 
-    // involks validation function - if all fields are entered (returns boolean)
-    var checking = validateNull();  
+    // involks validation function 
+    var checking = validateNull();  // - if all fields are entered (returns boolean)
+    var numberCheck = validateMinMax(event.target.elMin.value,event.target.elMax.value); // Max > Min (returns boolean)
 
     // false: fields are NOT all entered
     if(! checking){
         alert("You will need to enter in all the form fields to continue");
-    
+    // false: Max# is not Greater than Min#
+    } else if(! numberCheck){
+        alert("Your Max# needs to be LARGER than your Min#");
     // true: all fields are entered correctly - proceed with adding object/row
     } else {
         var locationName = event.target.elCity.value;

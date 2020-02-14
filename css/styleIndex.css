@@ -55,7 +55,7 @@ SECTION - Section1 (PatsDream)
     }
 
     #colorText:hover {
-        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        background-image: linear-gradient(to left, violet, indigo, blue, green, blue, indigo, red);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -185,4 +185,9 @@ SECTION - Section3 (Photos and Merchandise)
         margin: 1%;
         font-size: 26px;
         padding: 10px;
+    }
+
+    button:hover {
+        background-color: green;
+        color: white;
     }

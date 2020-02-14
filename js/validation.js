@@ -14,13 +14,19 @@ function validateNumber(event){
     }
 }
 
+// =================================================
+// Validate - City is not already entered in array
+// =================================================
 var cityEntry = document.getElementById('elCity');
 cityEntry.addEventListener('change', validateCity);
 
 function validateCity(event){
+
     var entry = event.target.value; 
     entry = entry.toLowerCase();
+
     for (var i = 0; i < allLocations.length; i++){
+
         var checkCity = allLocations[i].name;
         checkCity = checkCity.toLowerCase();
 
@@ -31,6 +37,9 @@ function validateCity(event){
     }
 }
 
+// ============================================
+// Validate - all fields have an entry
+// ============================================
 function validateNull(){
     var ele = locationForm.elements;
     var verified = true; 
@@ -41,33 +50,14 @@ function validateNull(){
     }
     return verified;
 }
+
 // ============================================
-// locationAdd - Add new Row to SalesTable
+// Validate - that the Max# is greater than Min#
 // ============================================
-// var locationForm = document.getElementById('locationAdd-form');
-// locationForm.addEventListener('submit', addLocation);
-
-
-// function addLocation(event){
-//     event.preventDefault();
-//     var locationName = event.target.elCity.value;
-//     var locationMax = parseInt(event.target.elMax.value); 
-//     var locationMin = parseInt(event.target.elMin.value);
-//     var locationAvg = parseInt(event.target.elAvg.value);
-
-//     new Location(locationName,locationMin, locationMax, locationAvg);
-    
-//     var x = allLocations.length-1;
-
-//     allLocations[x].customerPerHr();
-//     allLocations[x].calcHourlyCookies();
-//     allLocations[x].addSaleToTable();
-
-//     document.getElementById('salesTableTotal').deleteRow(0);
-//     tableFooterSetup();
-
-//     event.target.elCity.value = null;
-//     event.target.elMax.value = null;
-//     event.target.elMin.value = null;
-//     event.target.elAvg.value = null;
-// }
+function validateMinMax(min, max){
+    var checkNumbers = false;
+    if(max > min){
+        checkNumbers = true;
+    }
+    return checkNumbers;
+}

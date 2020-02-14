@@ -3,14 +3,12 @@ BODY
 ------------------------------*/ 
 main{
     text-align: center;
-    /* margin-top: 10px; */
     padding-left: 2.5%;
     padding-right: 2.5%;
     max-width: 960;
     min-height: 472px;
-    /* overflow: scroll; */
     margin-bottom: 2.5%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* ------------------------------
@@ -37,40 +35,92 @@ SECTION - FORM SECTION
         box-shadow: 0px 2px 5px black;
     }
 
+    /* FORM - form fields
+    ------------------------------*/ 
     #locationAdd-form{
         width: 100%;
-        display: inline-block;
+        display: inline-flex;
         text-align: left;
         padding: 1%;
     }
 
-    #locationAdd-fs{        
-        width: 98%;
-        padding-bottom: .5%;
-
-    }
-
-    #CustomerInfo{
-        display: inline-block;
-    }
-
     input{
-        padding: 5px;
         font-size: 14px;
+        width: 90%;
+        
     }
 
-    #locationCustomers-fs{
-        /* margin: 1%; */
-        width: 100%;
-        /* border: black 1px solid;  */
-        display: inline-flex;
+    label{
+        padding: 1%;
+        font-size: 1em;
+        margin-right: 1%;
     }
 
-    button{
-        margin-left: 2%;
+
+    .header{
         padding: 5px;
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: bold;
+        width: 100%;
+        margin-bottom: 1%;
+        text-align: left;
     }
+
+    fieldset{
+        /* height: 125px; */
+        top: 20px;
+        margin-right: 2%;
+    }
+
+    /*fieldset - locationAdd
+    ------------------------------*/ 
+    #locationAdd{        
+        display: inline-flex;
+        width: 30%;
+        overflow: hidden;
+    }
+    /*fieldset - CustomerInfo
+    ------------------------------*/ 
+    #CustomerInfo{
+        width: 70%;
+    }
+
+        /*div - locationCustomers
+        ------------------------------*/ 
+        #locationCustomers{
+            display: inline-grid;
+            text-align: right;
+            width: 30%;
+        }
+
+            #locationCustomers input{
+                float: right;
+                width: 70%;
+                margin-right: 3%;
+            }
+
+        /*div - AvgCookies-Submit
+        ------------------------------*/ 
+        #AvgCookies-Submit{
+            display: inline-grid;
+            text-align: left;
+            width: 30%;
+        }
+
+            #AvgCookies-Submit input{
+                width: 70%;
+                margin-left: 5%;
+            }
+
+            button{
+                margin-left: 20%;
+                font-size: 18px;
+                width: 15%;
+                height: 30%;
+                background-color: rgb(166,72,51);
+                color: white;
+                float: right;
+            }
 
 /* ------------------------------
 TABLE - SALES DATA
@@ -93,7 +143,6 @@ ID: salesTableHeader
     border: black 2px solid;
     background-color: rgb(166,72,51);
     color: white;
-    /* max-width: 10%; */
     text-align: center;
 }
 
@@ -119,8 +168,11 @@ ID: salesByLocation
     padding-top: .5%;
     padding-bottom: .25%;
     font-style: italic;
-    /* padding: 5px; */
     width: fit-content;
+    background-color: white;
+}
+#salesByLocation td:hover{
+    background-color: burlywood;
 }
 
 #locationTotals{
@@ -131,6 +183,10 @@ ID: salesByLocation
     text-align: center;
 }
 
+#locationTotals:hover{
+    background-color: burlywood;
+}
+
 /* ------------------------------
 - TABLE FOOT (TR: BY EACH LOCATION)
 ID: salesTableTotal
@@ -138,23 +194,9 @@ ID: salesTableTotal
  ---------------
 */
 
-
 #salesTableTotal th {
     background-color: rgba(166,72,51,.75);
     border: black 2PX solid;
-}
-
-
-#salesTableTotal td{
-    font-size: 24px;
-    color: green;
-    width: fit-content;
-    padding: 10PX;
-    margin-top: auto;
-    margin-bottom: auto;
-    border: black 2PX solid;
-    background-color: rgba(166,72,51,.75);
-
 }
 
 #grandTotal{
@@ -164,5 +206,21 @@ ID: salesTableTotal
     width: fit-content;
 }
 
+#salesTableTotal td{
+    font-size: 24px;
+    color: white;
+    width: fit-content;
+    padding: 10PX;
+    margin-top: auto;
+    margin-bottom: auto;
+    border: black 2PX solid;
+    background-color: rgba(166,72,51,.75);
+}
+
+
+#salesTableTotal td:hover{
+    background-color: rgba(245, 252, 150, .5);
+    color: black;
+}
 
 
