@@ -7,17 +7,18 @@ main{
     padding-left: 5%;
     padding-right: 5%;
     width: 90%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poiret One', cursive;
+    height: min-content;
 }
 
 /* ------------------------------
-SECTION - FORM SECTION
+SECTION - locationImages
 ------------------------------*/ 
 
 #locationImages{
     text-align: center;
     width: 100%;
-    margin-top: 3%;
+    margin-top: 10%;
   }
 
 .locations{
@@ -26,6 +27,7 @@ SECTION - FORM SECTION
     text-align: left;
     width: 100%;
     margin-bottom: 1%;
+
 }
 
 .cityInformation{
@@ -44,14 +46,14 @@ SECTION - FORM SECTION
 }
 
 .cityPic{
-    width: 45%;
-    height: 45%;
+    width: 25%;
+    height: 25%;
     border-top: black solid 1px;
     border-left: black solid 1px;
     border-right: black solid 3px;
     border-bottom: black solid 3px;
     box-shadow: black 5px 5px 15px;
-    margin: 1%;
+    margin: 1% 2% 2% 2%;
     display: inline-flex;
 }
 
@@ -62,29 +64,19 @@ SECTION - FORM SECTION
 
 .address{
     text-align: right;
-    /* margin-bottom: 2.5%; */
+    margin-right: 2%;
+    font-size: 28px;
+    font-style: italic;
 }
 
 .cityWriteUp{
     padding: 2.5%;
     text-indent: 5%;
-    font-size: 16px;
+    font-size: 24px;
 }
 
-/*   
-  .imgButton{
-      border: 3px rgb(13,13,13) solid;
-      width: fit-content;
-      font-size: 20px;
-      margin: 20px 0px 20px 0px;
-  }
-  
-  .imgButton p{
-      color: white;
-      font-size: 35px;
-      font-weight: bold;
-      padding: 5px 5px;
-      background-color: rgb(191,117,75);
-      font-family: Georgia, 'Times New Roman', Times, serif;
-      border-bottom: black 2px double
-  } */
+button{
+    font-size: 20px;
+    padding: 1%;
+    margin-bottom: 5%;
+}

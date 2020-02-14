@@ -21,25 +21,13 @@
                         <img class="fish" src="img/chinook.png" alt="chinook" >
                     </div>
                     <ul id='right_NavBar'>
-                        <li><a href="order.html">Place an Order</a></li>
-                        <li><a href="merchandise.html">Merchandise</a></li>
+                        <li><a href="#">Place an Order</a></li>
+                        <li><a href="#">Merchandise</a></li>
                     </ul>
                 </nav>
         </header>
         <main>
-            <section>
-                <ul>
-                    <li></li>
-                </ul>
-            </section>
             <section id="locationImages">
-
-                <!-- <li>Seattle<br>12 Fish Way</li>
-                <li>Paris<br>34 Stinky Drive</li>
-                <li>Tokyo<br>567 Waterfront Pkwy</li>
-                <li>Dubai<br>8 Fishguts Lane</li>
-                <li>Lima<br>99 Slippery Alley</li> -->
-
                 <div class="locations">
                     <h2 class="cityName">Seattle, USA</h2>
                     <div class="cityInformation">
@@ -50,7 +38,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="locations">
                     <h2 class="cityName">Tokyo, Japan</h2>
                     <div class="cityInformation">
@@ -94,8 +81,13 @@
                         </div>
                     </div>
                 </div>
+                <div>
+                    <button id="btnPrevious" onclick="plusDivs(-1)">< PREV</button>
+                    <button id="btnNext" onclick="plusDivs(+1)">NEXT ></button>
+                </div>
             </section>
         </main>
+        <script type="text/javascript" src="js/display.js"></script>
         <footer>
             <div id="locations">
                 <h3>Locations</h3>

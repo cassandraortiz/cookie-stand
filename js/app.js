@@ -1,41 +1,6 @@
 'use strict';
-// LAB 09
-// ==============================
-// 1. Replace all of your object literals for the salmon cookie stand with a single constructor function that, when called with the 'new' keyword, it creates a new instance.
-
-// 2. Replace the lists of your data for each store and build a single table of data instead. It shoudl look similar to the following:
-
-//  Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a "Daily Location Total".
-
-
-//          | 6:00 am  | 7:00 am | 8:00 am | 9:00 am | 10:00 am | 11:00 am | 12:00 pm | Daily Location Total | 
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Seattle  |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Tokyo    |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Dubai    |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Paris    |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Lima     |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Totals   |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-
-// - Each cookie stand location should have a separate render() method that creates and appends its row to the table
-
-// - The header row and footer row are each created in their own stand-alone function
-
-// Location | Min / Cust | Max / Cust | Avg Cookie / Sale
-// ---------|------------|------------|-------------------
-// Seattle  |      23    |     65     |        6.3
-// Tokyo    |      3     |     24     |        1.2
-// Dubai    |      11    |     38     |        3.7
-// Paris    |      20    |     38     |        2.3
-// Lima     |      2     |     16     |        4.6
-
-
+// GLOBAL VARIABLES
+// =========================================================
 var operatingHours = ['6am', '7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 var franchiseLocations = ['Seattle','Tokyo','Dubai','Paris','Lima'];
 var allLocations = [];
