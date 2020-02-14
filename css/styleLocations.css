@@ -3,15 +3,80 @@ BODY
 ------------------------------*/ 
 main{
     text-align: center;
-    /* margin-top: 10px; */
-    padding-left: 2.5%;
-    padding-right: 2.5%;
-    max-width: 960;
-    height: 472px;
-    margin-bottom: 2.5%;
-    font-family: 'Open Sans', sans-serif;
+    margin-top: 5.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 90%;
+    font-family: 'Poiret One', cursive;
+    height: min-content;
 }
 
 /* ------------------------------
-SECTION - FORM SECTION
+SECTION - locationImages
 ------------------------------*/ 
+
+#locationImages{
+    text-align: center;
+    width: 100%;
+    margin-top: 10%;
+  }
+
+.locations{
+    background-color: white;
+    border: 1px solid black;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 1%;
+
+}
+
+.cityInformation{
+    display: inline-flex;
+    width: 100%;
+}
+
+.cityName{
+    font-size: 24px;
+    padding: .5% 1%;
+    color: white;
+    background-color: rgb(166,72,51);
+    border-bottom: black 1px solid;
+    box-shadow: black 0px 2px 2px;
+    display: block;
+}
+
+.cityPic{
+    width: 25%;
+    height: 25%;
+    border-top: black solid 1px;
+    border-left: black solid 1px;
+    border-right: black solid 3px;
+    border-bottom: black solid 3px;
+    box-shadow: black 5px 5px 15px;
+    margin: 1% 2% 2% 2%;
+    display: inline-flex;
+}
+
+.aboutStore{
+    margin: 1%;
+    width: 100%;
+}
+
+.address{
+    text-align: right;
+    margin-right: 2%;
+    font-size: 28px;
+    font-style: italic;
+}
+
+.cityWriteUp{
+    padding: 2.5%;
+    text-indent: 5%;
+    font-size: 24px;
+}
+
+button{
+    font-size: 20px;
+    padding: 1%;
+    margin-bottom: 5%;
+}

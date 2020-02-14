@@ -1,41 +1,6 @@
 'use strict';
-// LAB 09
-// ==============================
-// 1. Replace all of your object literals for the salmon cookie stand with a single constructor function that, when called with the 'new' keyword, it creates a new instance.
-
-// 2. Replace the lists of your data for each store and build a single table of data instead. It shoudl look similar to the following:
-
-//  Display each stores data in a table format similar to what is below. Break each column by the hour and complete each row with a "Daily Location Total".
-
-
-//          | 6:00 am  | 7:00 am | 8:00 am | 9:00 am | 10:00 am | 11:00 am | 12:00 pm | Daily Location Total | 
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Seattle  |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Tokyo    |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Dubai    |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Paris    |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Lima     |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-// Totals   |          |         |         |         |          |          |          |                      |
-// ---------|----------|---------|---------|---------|----------|----------|----------|----------------------|
-
-// - Each cookie stand location should have a separate render() method that creates and appends its row to the table
-
-// - The header row and footer row are each created in their own stand-alone function
-
-// Location | Min / Cust | Max / Cust | Avg Cookie / Sale
-// ---------|------------|------------|-------------------
-// Seattle  |      23    |     65     |        6.3
-// Tokyo    |      3     |     24     |        1.2
-// Dubai    |      11    |     38     |        3.7
-// Paris    |      20    |     38     |        2.3
-// Lima     |      2     |     16     |        4.6
-
-
+// GLOBAL VARIABLES
+// =========================================================
 var operatingHours = ['6am', '7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
 var franchiseLocations = ['Seattle','Tokyo','Dubai','Paris','Lima'];
 var allLocations = [];
@@ -115,7 +80,7 @@ Location.prototype.addSaleToTable = function(){
     cell = tblRow.insertCell(col);                  // create a cell - insert that cell in specific index location
     cell.textContent = this.totalDailyCookies;      // give that cell total sales per location
     cell.id = "locationTotals";
-    grandTotal += this.totalDailyC3ookies;           // increasing grand total
+    grandTotal += this.totalDailyCookies;           // increasing grand total
 };
 
 // ============================================
@@ -177,29 +142,38 @@ locationForm.addEventListener('submit', addLocation);
 function addLocation(event){
     event.preventDefault();
 
-    var cheking = validateNull();
+    // involks validation function 
+    var checking = validateNull();  // - if all fields are entered (returns boolean)
+    var numberCheck = validateMinMax(event.target.elMin.value,event.target.elMax.value); // Max > Min (returns boolean)
 
-    console.log('checking: ' + cheking);
-
-    var locationName = event.target.elCity.value;
-    var locationMax = parseInt(event.target.elMax.value); 
-    var locationMin = parseInt(event.target.elMin.value);
-    var locationAvg = parseInt(event.target.elAvg.value);
-
-    new Location(locationName,locationMin, locationMax, locationAvg);
+    // false: fields are NOT all entered
+    if(! checking){
+        alert("You will need to enter in all the form fields to continue");
+    // false: Max# is not Greater than Min#
+    } else if(! numberCheck){
+        alert("Your Max# needs to be LARGER than your Min#");
+    // true: all fields are entered correctly - proceed with adding object/row
+    } else {
+        var locationName = event.target.elCity.value;
+        var locationMax = parseInt(event.target.elMax.value); 
+        var locationMin = parseInt(event.target.elMin.value);
+        var locationAvg = parseInt(event.target.elAvg.value);
     
-    var x = allLocations.length-1;
-
-    allLocations[x].customerPerHr();
-    allLocations[x].calcHourlyCookies();
-    allLocations[x].addSaleToTable();
-
-    document.getElementById('salesTableTotal').deleteRow(0);
-    tableFooterSetup();
-
-    event.target.elCity.value = null;
-    event.target.elMax.value = null;
-    event.target.elMin.value = null;
-    event.target.elAvg.value = null;
+        new Location(locationName,locationMin, locationMax, locationAvg);
+        
+        var x = allLocations.length-1;
+    
+        allLocations[x].customerPerHr();
+        allLocations[x].calcHourlyCookies();
+        allLocations[x].addSaleToTable();
+    
+        document.getElementById('salesTableTotal').deleteRow(0);
+        tableFooterSetup();
+    
+        event.target.elCity.value = null;
+        event.target.elMax.value = null;
+        event.target.elMin.value = null;
+        event.target.elAvg.value = null;
+    };
 }
 

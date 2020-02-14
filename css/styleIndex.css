@@ -20,17 +20,13 @@ SECTION - Section1 (PatsDream)
     width: 80%;
 }
 
-/* #section1 img{
-    max-width: 960px;
-    width: 100%;
-} */
 
     #PatsDream{
         position: absolute;
         background-color: rgba(221, 158, 41, 0.5);
         z-index: 90;
         width: 45%;
-        height: 60%;
+        height: fit-content;
         left: 5%;
         top: 35%;
         padding: 10px;
@@ -59,7 +55,7 @@ SECTION - Section1 (PatsDream)
     }
 
     #colorText:hover {
-        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        background-image: linear-gradient(to left, violet, indigo, blue, green, blue, indigo, red);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -68,9 +64,7 @@ SECTION - Section1 (PatsDream)
 SECTION - Section2 (Pats Family)
 ------------------------------*/ 
 #section2{
-    background-image: url(/img/wood\ background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: rgba(166,72,51, .75);
     display: inline-flex;
     width: 80%;
     padding: 2% 2%;
@@ -191,4 +185,9 @@ SECTION - Section3 (Photos and Merchandise)
         margin: 1%;
         font-size: 26px;
         padding: 10px;
+    }
+
+    button:hover {
+        background-color: green;
+        color: white;
     }
